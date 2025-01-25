@@ -31,6 +31,17 @@ main{
     font-size: 7em;
     text-shadow: 10px 10px 8px black;
 }
+.prenom.anim{
+    animation: faedIN 2s ease-in-out;
+}
+@keyframes fadeIN{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 .bref{
     font-size:1.7em;
     text-align: center;

@@ -1,0 +1,60 @@
+body {
+    color: white;
+    background: linear-gradient(to right, #2f011d, #012a36);
+}
+.MonMenu{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+    margin-top: 2em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    text-align: center;
+    border-bottom: solid;
+    border-radius: 5em;
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+.Eltmenu:hover{
+    zoom: 1.1;
+}
+
+main{
+    margin-top: 1em;
+    border-top: solid;
+    border-radius: 5em;
+}
+.prenom{
+    margin: 1em;
+    font-size: 7em;
+    text-shadow: 10px 10px 8px black;
+}
+.prenom.anim{
+    animation: faedIN 2s ease-in-out;
+}
+@keyframes fadeIN{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.bref{
+    font-size:1.7em;
+    text-align: center;
+    margin-left: 4em;
+    margin-right: 4em;
+    text-shadow: 10px 10px 8px black;
+}
+footer{
+
+    font-family: cursive;
+    margin-top: 4em;
+    display: grid;
+    text-align: center;
+    border: solid;
+    border-radius: 5em;
+}
