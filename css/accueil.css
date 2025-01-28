@@ -34,20 +34,44 @@ main{
 .prenom.anim{
     animation: faedIN 2s ease-in-out;
 }
-@keyframes fadeIN{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-.bref{
-    font-size:1.7em;
+
+.bref_cases{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    padding-top: 1em;
     text-align: center;
-    margin-left: 4em;
-    margin-right: 4em;
-    text-shadow: 10px 10px 8px black;
+}
+#case{
+    border-radius: 2em;
+    width: 50%;
+    height: auto;
+    margin: 2em;
+    background-color: rgb(7, 51, 90);
+    box-shadow: #000000 5px 5px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+.large-icon{
+    height: 5em;
+    width: 5em;
+    align-items: center;
+    text-align: center;
+    color: yellow;
+}
+.text{
+    font-size: 1.2em;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin: 1em;
+    text-align: center;
+
 }
 footer{
 
