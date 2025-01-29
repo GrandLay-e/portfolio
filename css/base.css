@@ -34,14 +34,7 @@ main{
 .prenom.anim{
     animation: faedIN 2s ease-in-out;
 }
-@keyframes fadeIN{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
+
 .bref{
     font-size:1.7em;
     text-align: center;
