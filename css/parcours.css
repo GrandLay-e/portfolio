@@ -1,0 +1,10 @@
+#presentation{
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+}
+.imgillust{
+    background-image: url(../../images/school.png);
+    border-radius: 1em;
+    border-top-left-radius: 3em;
+    border-bottom-right-radius: 3em;
+}
