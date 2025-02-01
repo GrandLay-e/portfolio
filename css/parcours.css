@@ -13,6 +13,9 @@
 #separator{
     margin: 5em;
 }
+.toutparcours{
+    margin: 5em;
+}
 .sectParc{
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -66,6 +69,84 @@
     grid-template-columns: 5fr 2fr;
 }
 .pr8{
-    border-bottom-left-radius: 5em;
+    border-bottom-left-radius: 4em;
     border-top-right-radius: 4em;
+}
+._parcvlm{
+    border-top: solid;
+    border-color: rgba(0, 255, 34, 0.571);
+
+
+}
+.titre_parc{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2em;
+    margin-left: 2em;
+    border-bottom: solid 1px;
+    border-radius: 2em;
+    width: 55%;
+    text-align: center;
+    padding-bottom: 0.2em;
+    box-shadow: 2px 8px 10px 4px black;
+    border-color: rgba(255, 255, 255, 0.538);
+}
+.tiret{
+    border-left: solid 2px;
+    height: 3.5em;
+    margin-left: 10%;
+    margin-bottom: -2em;
+    margin-top: -1em;
+    border-color: rgba(0, 255, 34, 0.571);
+    
+}
+
+.BTS{
+    width: 64%;
+    border-color: rgba(0, 255, 34, 0.571);
+    color: rgba(0, 255, 34, 0.481);
+}
+.Licence{
+    width: 75%;
+    color: rgba(126, 2, 35, 0.941);
+    border-color: rgba(126, 2, 35, 0.941);
+    margin-left: 20%;
+}
+.t_lcs{
+    border: 0px;
+    border-right: solid 2px;
+    margin-right: 10%;
+    border-color: rgba(126, 2, 35, 0.941);
+}._parcp8{
+    border-top: solid 1px;
+    border-color: rgba(126, 2, 35, 0.941);
+}
+
+._parcbac{
+    border-top: solid;
+}
+.baccaleaureat, .t_bac, ._bac, ._parcbac{
+    border-color: rgba(1, 78, 129, 0.767);
+}
+.baccaleaureat{
+    width: 25%;
+    color: rgb(1, 78, 129);
+}
+
+._parcelearn{
+    border-top : solid 2px;
+}
+.t_elearn, ._parcelearn, .t_learn{
+    border-color: rgba(5,74,74);
+}.t_learn{
+    color: rgb(5, 74, 74);
+    width: 25%;
+    margin-left: 70%;
+}.t_elearn{
+    border: 0px;
+    border-right: solid 2px;
+    margin-right: 10%;
+    border-color:rgb(5, 74, 74);
+    margin-bottom: -4em;
+}._parcelearn{
+    margin: 5em;
 }
