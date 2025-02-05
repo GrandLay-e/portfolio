@@ -58,6 +58,9 @@
     background-image: url(../../images/UCAD.png);
 }.elearn{
     background-image: url(../../images/online.png);
+    width: 130%;
+    height: 130%;
+    margin-right: 10em;
 }
 
 ._parcvlm, ._parcbac{
