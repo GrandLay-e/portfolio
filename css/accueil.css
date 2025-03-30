@@ -2,18 +2,15 @@ body {
     position: relative;
     color: white;
     font-family: 'Times New Roman', Times, serif;
-    background-color: #010409f4;
+    /* background-color: #212121; */
 }
 nav{
     width: 100%;
     height: 100%;
 }
 .MonMenu{
-    /* position:fixed; */
-    /* width: 98%; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    /* margin-top: 2em; */
     padding-bottom: 1em;
     padding-top: 1em;
     text-align: center;
@@ -34,26 +31,42 @@ a{
     zoom: 1.1;
 }
 #presentation{
-    margin-top: 7em;
-    display: grid;
-    grid-template-columns: 5fr 2fr;
+    /* margin-top: 3em; */
+    margin-bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     margin-right: 2em;
     align-content: center;
-    /* align-items:flex-start; */
-    /* background-color: rgb(255, 166, 0); */
+    /* background : linear-gradient(to bottom, black, rgb(6, 46, 83)); */
+    background-color: #ffffff;
+    /* border-radius: 1em; */
+    /* border-top-left-radius: 10em ; */
+    /* border-top-right-radius: 5em; */
+    /* border-bottom-right-radius: 5em; */
+    /* border-bottom-left-radius: 2em; */
+
 }
-.nometimg{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-right: 10em;
-}
+
 .prenom{
-    /* margin-top: 2em; */
-    margin-left: 1em;
+    color: #010409;
+    /* margin-left: 1em; */
     font-size: 5em;
-    text-shadow: 1px 1px 10px rgb(5, 33, 94);
+    text-shadow: 1px 1px 10px rgb(3, 18, 52);
+    margin-bottom: 0;
 }
+.bref{
+    color: black;
+    font-size:1.4em;
+    text-align: justify;
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-bottom: 0;
+    padding: 1em;
+    border-radius: 2em;
+    line-height: 1.4;
+}
+
 .imgillust{
     background-image: url(../../images/pcs.jpg);
     background-position:center;
@@ -85,21 +98,6 @@ a{
 
     box-shadow: 5px 5px 10px 5px rgb(0, 0, 0);
 }
-.bref{
-    font-size:1.4em;
-    text-align: justify;
-    margin-left: 4em;
-    margin-right: 4em;
-    /* background-color: rgba(0, 0, 0, 0.142); */
-    /* box-shadow: 1px 1px 7px 5px rgb(0, 0, 0); */
-    padding: 1em;
-    border-radius: 2em;
-    line-height: 1.4;
-    /* transition: box-shadow 0.9s ease-in-out; */
-}
-.bref:hover {
-    animation: shadow-move 0.9s forwards;
-}
 
 @keyframes shadow-move {
     from {
@@ -116,12 +114,16 @@ a{
 .separator{
     height: 5em;
 }
+.contenu{
+    /* background-color: rgb(3, 51, 51); */
+    width: 100%;
+    border-radius: 2em;
+    border-top-right-radius: 6em;
+}
 .bref_cases {
+    width: 100%;
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr;
-    justify-content: center;
-    margin-top: 4em;
-    margin: 2em;
+    grid-template-columns:1fr;
     padding-bottom: 1em;
     padding-top: 1em;
     text-align: center;
@@ -129,22 +131,27 @@ a{
 
 #case {
     border-radius: 2em;
-    width: 85%; /* Ajusté pour tenir 3 éléments par ligne */
+    /* width: 85%;  */
     margin: 2em;
-    background-color: rgba(0, 0, 0, 0.627);
+    background-color: rgb(1, 62, 72);
     box-shadow: 1px 1px 15px 10px rgb(0, 0, 0);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
     text-align: justify;
-    border-top: solid;
-    border-bottom: solid;
-    border-color: white;
+    /* border-left: solid; */
+    /* border-top: solid; */
+    /* border-color: white; */
+    transition: transform 0.2s ease-in-out;
+}
+#case div{
+    margin-left: 2em;
 }
 
 #case:hover {
-    background-color: rgba(0, 0, 0, 0.929);  
+    transform: translateY(5px);
+
 }
 
 #case:nth-child(5) {
