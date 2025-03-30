@@ -2,7 +2,7 @@ body {
     position: relative;
     color: white;
     font-family: 'Times New Roman', Times, serif;
-    /* background-color: #212121; */
+    background-color: #212121;
 }
 nav{
     width: 100%;
@@ -38,25 +38,18 @@ a{
     flex-direction: column;
     margin-right: 2em;
     align-content: center;
-    /* background : linear-gradient(to bottom, black, rgb(6, 46, 83)); */
-    background-color: #ffffff;
-    /* border-radius: 1em; */
-    /* border-top-left-radius: 10em ; */
-    /* border-top-right-radius: 5em; */
-    /* border-bottom-right-radius: 5em; */
-    /* border-bottom-left-radius: 2em; */
 
 }
 
 .prenom{
-    color: #010409;
+    color: #ffffff;
     /* margin-left: 1em; */
     font-size: 5em;
     text-shadow: 1px 1px 10px rgb(3, 18, 52);
     margin-bottom: 0;
 }
 .bref{
-    color: black;
+    color: rgb(255, 255, 255);
     font-size:1.4em;
     text-align: justify;
     margin-left: 4em;
@@ -129,36 +122,42 @@ a{
     text-align: center;
 }
 
-#case {
-    border-radius: 2em;
+.case {
+    border-radius: 1em;
     /* width: 85%;  */
     margin: 2em;
-    background-color: rgb(1, 62, 72);
+    background-color: rgb(3, 30, 47);
     box-shadow: 1px 1px 15px 10px rgb(0, 0, 0);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     text-align: justify;
-    /* border-left: solid; */
-    /* border-top: solid; */
+    border-left: solid;
+    border-right: solid;
     /* border-color: white; */
     transition: transform 0.2s ease-in-out;
 }
-#case div{
+.case div{
     margin-left: 2em;
 }
-
-#case:hover {
+.case div p{
+    text-align: justify;
+}
+.case:hover {
     transform: translateY(5px);
-
 }
 
-#case:nth-child(5) {
+.case:nth-child(5) {
     flex-basis: 30%; /* Fait prendre le troisième élément toute la largeur disponible */
 }
 
-
+.parc, .inter{
+    margin-left: 15em;
+}
+.comp{
+    margin-right: 15em;
+}
 .large-icon{
     height: 5em;
     width: 5em;
