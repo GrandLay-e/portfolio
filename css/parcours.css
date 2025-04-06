@@ -1,4 +1,7 @@
+body{
+    background-color: #212121;
 
+}
 #presentation{
     display: grid;
     grid-template-columns: 2fr 5fr;
