@@ -4,6 +4,7 @@ body{
     padding: 0;
     background-color: #034652;
     color: aliceblue;
+    overflow-x: hidden;
 }
 p.intro{
     color: #f0f0f0;
@@ -86,14 +87,13 @@ main section{
     height: auto;
     background-color: #012a32;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.558);
     transition: transform 0.3s ease;
 }
 .link-cards{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));   
 }
 .card:hover {
     transform: translateY(-10px);
@@ -227,27 +227,26 @@ main section{
 .competence_page section ul li, .education-section div.card ul li {
     height: fit-content;
     list-style-type: none;
-    background-color: #001a1ff1;
+    background-color: #001a1f6d;
     border-radius: 10px;
     padding: 15px;
     margin-bottom: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.675);
     text-align: center;
     font-size: 1.1em;
-    text-transform: capitalize;
     transition: transform 0.2s ease;
 }
 .competence_page section ul li:hover, .education-section div.card ul li:hover {
-    background-color: #011a01;
+    background-color: #004d00;
     cursor: pointer;
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0,0, 0.675);
 }
+
 .used-language{
     background-color: #004857;
     border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 6px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.675);
     transition: transform 0.2s ease;
 }
@@ -268,8 +267,20 @@ main section{
     gap: 50px;
     padding: 20px;
 }
+.project-container{
+    position: relative;
+    background-color: #012a32;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.675);
+    transition: transform 0.3s ease;
+}
+.project-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.675);
+}
 .project-container a img {
-    padding: 5px;
+    padding: 10px;
     padding-bottom: 0;
     padding-top: 0;
     position: absolute;
