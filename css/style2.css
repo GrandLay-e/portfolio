@@ -5,6 +5,10 @@
 /* Tablettes et écrans moyens (max-width: 768px) */
 @media (max-width: 768px) {
     /* Navigation responsive */
+    body {
+        font-size: 16px;
+        overflow-x: hidden;
+    }
     nav {
         height: auto;
         padding: 15px 10px;
@@ -179,6 +183,12 @@
 
 /* Mobiles (max-width: 480px) */
 @media (max-width: 480px) {
+    /* Body */
+    body {
+        font-size: 14px;
+        padding: 0;
+        overflow-x: hidden;
+    }
     /* Navigation mobile */
     nav {
         padding: 10px 5px;
@@ -328,6 +338,12 @@
 
 /* Très petits écrans (max-width: 320px) */
 @media (max-width: 320px) {
+    /* Body très petit */
+    body {
+        font-size: 12px;
+        padding: 0;
+        overflow-x: hidden;
+    }
     /* Navigation très petite */
     nav ul li {
         margin: 5px 8px;

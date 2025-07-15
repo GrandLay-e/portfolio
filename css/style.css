@@ -316,6 +316,10 @@ footer section ul{
 }
 
 @media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        overflow-x: hidden;
+    }
     nav {
         height: auto;
         padding: 15px 10px;
@@ -345,6 +349,11 @@ footer section ul{
 }
 
 @media (max-width: 480px) {
+    body {
+        font-size: 14px;
+        padding: 0;
+        overflow-x: hidden;
+    }
     nav {
         padding: 10px 5px;
     }
@@ -366,6 +375,11 @@ footer section ul{
     }   
 }
 @media (max-width: 320px) {
+    body {
+        font-size: 12px;
+        padding: 0;
+        overflow-x: hidden;
+    }
     nav ul li {
         margin: 5px 8px;
     }    
