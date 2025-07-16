@@ -133,7 +133,7 @@ main section{
     padding-top: 10px;
     position: absolute;
     bottom: 0;
-    width: 90%;
+    width: 95%;
     text-align: center;
 }
 .card h4 {
@@ -292,13 +292,13 @@ main section{
     transition: transform 0.3s ease;
 }
 footer {
+    width: 100%;
     background-color: #012a32;
     color: #f0f0f0;
     text-align: center;
     padding: 20px;
     position: relative;
     bottom: 0;
-    width: 100%;
 }
 footer section {
     display: flex;
