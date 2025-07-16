@@ -17,9 +17,9 @@ Passionné par les sciences humaines, les nouvelles technologies et le développ
 
 ```
 portfolio/
-├── README.md              # Documentation du projet
-├── index.html              # Page d'accueil
-├── css/                   # Feuilles de style
+├── README.md             # Documentation du projet
+├── index.html            # Page d'accueil
+├── css/                  # Feuilles de style
 │   ├── style.css         # Styles principaux
 ├── images/               # Ressources visuelles
 └── pages/                # Pages du site
