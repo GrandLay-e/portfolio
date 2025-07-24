@@ -2,7 +2,8 @@ body{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #034652;
+    /* background-color: #034652; */
+    background-color: #012a32;
     color: aliceblue;
     overflow-x: hidden;
 }
@@ -37,9 +38,8 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     height: 60px;
-    background-color: #012a32;
     padding: 10px;
-    border-bottom: solid 3px #ffffff;
+    border-bottom: solid 2px #ffffff;
     
 }
 ul {
@@ -67,7 +67,9 @@ h1 {
     font-size: 2.5em;
 }
 main {
+    width: 100%;
     padding: 20px;
+    background-color: #034652;
 }
 main section{
     display: flex;
@@ -301,6 +303,7 @@ footer {
     padding: 20px;
     position: relative;
     bottom: 0;
+    border-top: 2px solid #ffffff;
 }
 footer section {
     display: flex;
