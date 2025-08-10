@@ -25,3 +25,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+document.addEventListener('click', function(e) {
+    const contact = document.getElementById('contact-link');
+    if (e.target === contact) {
+        e.preventDefault();
+        const contactSection = document.getElementById('contact');
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+});

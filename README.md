@@ -33,6 +33,7 @@ portfolio/
 ### Frontend
 - **HTML5** - Structure du site
 - **CSS3** - Styles et mise en page responsive
+- **JavaScript** - Interactivité et fonctionnalités dynamiques
 
 ### Compétences Techniques
 - **Python** - Développement d'applications et web scraping
@@ -97,7 +98,7 @@ Le site inclut :
 **Abdallah Sow**
 - 🎯 **Objectif :** Alternance en développement informatique
 - 🎓 **Formation :** BTS SIO (2ème année)
-- 💼 **Spécialités :** Développement web, Python, PHP, SQL, C#
+- 💼 **Spécialités :** Développement web, Python, PHP, JavaScript, SQL & C#
 - 🌐 **Langues :** Français, Arabe, Anglais
 
 ## 🤝 Contributions
@@ -110,6 +111,6 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 ---
 
-*Dernière mise à jour : Juillet 2025*
+*Dernière mise à jour : Août 2025*
 
 **En recherche active d'une alternance en développement informatique** 🚀

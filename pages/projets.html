@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="../js/main.js" defer></script>
     <title> Abdallah Sow </title>
     <meta name="description" content="Portfolio d'Abdallah Sow, étudiant en BTS SIO, présentant ses projets de développement web et ses compétences techniques. Découvrez ses réalisations en Python, PHP, SQL et C#.">
     <meta name="keywords" content="Abdallah Sow, portfolio, BTS SIO, projets, développement web, Python, PHP, SQL, C#, compétences techniques">
@@ -13,11 +14,36 @@
 <body>
     <nav>
         <ul>
-            <li><a href="../index.html"> Accueil </a></li>
-            <li><a href="parcours.html"> Formation </a></li>
-            <li><a href="competences.html"> Compétences </a></li>
-            <li><a href="projets.html"> Projets </a></li>
-            <li><a href="#contact"> Contact </a></li>
+            <li>
+                <a href="../index.html">
+                    <span class="material-symbols-outlined">home</span>
+                    <span class="nav-text">Accueil</span>
+                </a>
+            </li>
+            <li>
+                <a href="parcours.html">
+                    <span class="material-symbols-outlined">school</span>
+                    <span class="nav-text">Formation</span>
+                </a>
+            </li>
+            <li>
+                <a href="competences.html">
+                    <span class="material-symbols-outlined">psychology</span>
+                    <span class="nav-text">Compétences</span>
+                </a>
+            </li>
+            <li>
+                <a href="projets.html">
+                    <span class="material-symbols-outlined">code</span>
+                    <span class="nav-text">Projets</span>
+                </a>
+            </li>
+            <li>
+                <a href="#contact" id="contact-link">
+                    <span class="material-symbols-outlined">contact_mail</span>
+                    <span class="nav-text">Contact</span>
+                </a>
+            </li>
         </ul>
     </nav>
 
@@ -26,36 +52,38 @@
         <section class="project-section" id="portfolio-project">
             <div class="project-container card">
                 <h2 class="project-title">Company Scraper</h2>
-                <span class="used-language">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" style="width:20px; height:20px; vertical-align:middle;">
-                        Python
-                </span>
-                <span class="used-language">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL Logo" style="width:40px; height:20px; vertical-align:middle;">
-                        SQLite
-                </span>
-            
-                <span class="used-language">
-                    <img src="../images/json.jpg" alt="JSON Logo" style="width:20px; height:20px; vertical-align:middle;">
-                    JSON
-                </span>
-                <span class="used-language">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Selenium_Logo.png" alt="Selenium Logo" style="width:24px; height:24px; vertical-align:middle;">
-                    Selenium
-                </span>
+                <div class="used-tech">
+                    <span class="used-language">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" style="width:20px; height:20px; vertical-align:middle;">
+                            Python
+                    </span>
+                    <span class="used-language">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL Logo" style="width:40px; height:20px; vertical-align:middle;">
+                            SQLite
+                    </span>
+                
+                    <span class="used-language">
+                        <img src="../images/json.jpg" alt="JSON Logo" style="width:20px; height:20px; vertical-align:middle;">
+                        JSON
+                    </span>
+                    <span class="used-language">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Selenium_Logo.png" alt="Selenium Logo" style="width:24px; height:24px; vertical-align:middle;">
+                        Selenium
+                    </span>
+                </div>
                 <p class="project-description">
                     Outil d'automatisation Python qui scrape les données d'entreprises depuis Welcome to the Jungle et permet de postuler automatiquement aux offres d'emploi avec une lettre de motivation personnalisée.
                 </p>
                 <div class="project-features">
                     <h4>🔧 Fonctionnalités principales :</h4>
                     <ul>
-                        <li><strong>Scraping avancé :</strong> Collecte automatique des données d'entreprises (nom, domaine, lieu, site web, offres, etc.) du secteur Tech</li>
-                        <li><strong>Stockage de données :</strong> Sauvegarde en JSON et base de données SQLite</li>
-                        <li><strong>Système de filtrage :</strong> Filtrage par localisation, domaine et candidatures spontanées</li>
-                        <li><strong>Auto-candidature :</strong> Connexion automatique et candidature avec lettre de motivation personnalisée</li>
-                        <li><strong>Système de logs :</strong> Traçabilité complète des actions et erreurs</li>
-                        <li><strong>Suivi des candidatures :</strong> Évitement des doublons de candidature</li>
-                        <li><strong>Configuration personnalisable :</strong> Sélecteurs CSS et paramètres modifiables</li>
+                        <li><strong>Scraping avancé </strong> Collecte automatique des données d'entreprises (nom, domaine, lieu, site web, offres, etc.) du secteur Tech</li>
+                        <li><strong>Stockage de données </strong> Sauvegarde en JSON et base de données SQLite</li>
+                        <li><strong>Système de filtrage </strong> Filtrage par localisation, domaine et candidatures spontanées</li>
+                        <li><strong>Auto-candidature </strong> Connexion automatique et candidature avec lettre de motivation personnalisée</li>
+                        <li><strong>Système de logs </strong> Traçabilité complète des actions et erreurs</li>
+                        <li><strong>Suivi des candidatures </strong> Évitement des doublons de candidature</li>
+                        <li><strong>Configuration personnalisable </strong> Sélecteurs CSS et paramètres modifiables</li>
                     </ul>
                 </div>
                 <a class="project-link" href="https://github.com/GrandLay-e/company-scraper">
@@ -64,18 +92,20 @@
             </div>
             <div class="project-container card">
                 <h2 class="project-title">Eyrein Product</h2>
-                <span class="used-language">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" style="width:20px; height:20px; vertical-align:middle;">
-                        Python
-                </span>
-                <span class="used-language">
-                    <img src="../images/json.jpg" alt="JSON Logo" style="width:20px; height:20px; vertical-align:middle;">
-                    JSON
-                </span>
-                <span class="used-language">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" alt="Flask Logo" style="width:40px; height:20px; vertical-align:middle;">
-                    Flask API
-                </span>
+                <div class="used-tech">
+                    <span class="used-language">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" style="width:20px; height:20px; vertical-align:middle;">
+                            Python
+                    </span>
+                    <span class="used-language">
+                        <img src="../images/json.jpg" alt="JSON Logo" style="width:20px; height:20px; vertical-align:middle;">
+                        JSON
+                    </span>
+                    <span class="used-language">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" alt="Flask Logo" style="width:40px; height:20px; vertical-align:middle;">
+                        Flask API
+                    </span>
+                </div>
                 
                 <p class="project-description">
                     Projet réalisé dans le cadre de mon stage de première année de BTS SIO. Outil Python avec API Flask pour télécharger et organiser automatiquement les fiches produits d'une entreprise (Eyrein) depuis leur site web.
@@ -83,12 +113,12 @@
                 <div class="project-features">
                     <h4>🔧 Fonctionnalités principales :</h4>
                     <ul>
-                        <li><strong>Téléchargement automatique :</strong> Extraction des fiches produits depuis le site web d'Eyrein</li>
-                        <li><strong>Organisation intelligente :</strong> Classement automatique des fichiers par produits</li>
-                        <li><strong>Archivage ZIP :</strong> Création de fichiers ZIP organisés par produit</li>
-                        <li><strong>API Flask :</strong> Interface de programmation pour l'intégration avec d'autres systèmes</li>
-                        <li><strong>Gestion JSON :</strong> Traitement et structuration des données produits</li>
-                        <li><strong>Automatisation complète :</strong> Processus de téléchargement et d'organisation entièrement automatisé</li>
+                        <li><strong>Téléchargement automatique </strong> Extraction des fiches produits depuis le site web d'Eyrein</li>
+                        <li><strong>Organisation intelligente </strong> Classement automatique des fichiers par produits</li>
+                        <li><strong>Archivage ZIP </strong> Création de fichiers ZIP organisés par produit</li>
+                        <li><strong>API Flask </strong> Interface de programmation pour l'intégration avec d'autres systèmes</li>
+                        <li><strong>Gestion JSON </strong> Traitement et structuration des données produits</li>
+                        <li><strong>Automatisation complète </strong> Processus de téléchargement et d'organisation entièrement automatisé</li>
                     </ul>
                 </div>
                 <a class="project-link" href="https://github.com/grandlay-e/eyrein-products">
@@ -97,7 +127,7 @@
             </div>
             <div class="project-container card"> 
                 <h2 class="project-title">Pokedex</h2>
-                <div class="languages">
+                <div class="used-tech">
                     <span class="used-language">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP Logo" style="width:20px; height:20px; vertical-align:middle;">
                         PHP
@@ -117,13 +147,13 @@
                 <div class="project-features">
                     <h4>🔧 Fonctionnalités principales :</h4>
                     <ul>
-                        <li><strong>CRUD complet :</strong> Ajouter, supprimer, modifier et afficher des Pokémons</li>
-                        <li><strong>Intégration API :</strong> Récupération automatique des données depuis l'API Tyradex</li>
-                        <li><strong>Base de données :</strong> Stockage persistant en MySQL avec structure optimisée</li>
-                        <li><strong>Classe Pokemon_card :</strong> Modélisation orientée objet avec propriétés complètes (ID, nom, catégorie, types, talents, résistances, taille, poids)</li>
-                        <li><strong>Interface utilisateur :</strong> Formulaires interactifs pour la gestion des Pokémons</li>
-                        <li><strong>Tri alphabétique :</strong> Organisation automatique de la collection</li>
-                        <li><strong>Gestion des images :</strong> Affichage des sprites et images des Pokémons</li>
+                        <li><strong>CRUD complet </strong> Ajouter, supprimer, modifier et afficher des Pokémons</li>
+                        <li><strong>Intégration API </strong> Récupération automatique des données depuis l'API Tyradex</li>
+                        <li><strong>Base de données </strong> Stockage persistant en MySQL avec structure optimisée</li>
+                        <li><strong>Classe Pokemon_card </strong> Modélisation orientée objet avec propriétés complètes (ID, nom, catégorie, types, talents, résistances, taille, poids)</li>
+                        <li><strong>Interface utilisateur </strong> Formulaires interactifs pour la gestion des Pokémons</li>
+                        <li><strong>Tri alphabétique </strong> Organisation automatique de la collection</li>
+                        <li><strong>Gestion des images </strong> Affichage des sprites et images des Pokémons</li>
                     </ul>
                 </div>
                 <a class="project-link" href="https://github.com/GrandLay-e/pokedex">
@@ -132,23 +162,26 @@
             </div>
 
             <div class="project-container card"> 
-                <h2 class="project-title">FileArranger</h2>
-                <span class="used-language">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" style="width:20px; height:20px; vertical-align:middle;">
-                    Python</span>
+                <h2 class="project-title">File Arranger</h2>
+                <div class="used-tech">
+                    <span class="used-language">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" style="width:20px; height:20px; vertical-align:middle;">
+                        Python
+                    </span>
+                </div>
                     <p class="project-description">
                     Outil Python de réorganisation automatique et intelligente des fichiers d'un dossier. Organisation par type d'extension, année et mois de création avec support de multiples formats de fichiers.
                 </p>
                 <div class="project-features">
                     <h4>🔧 Fonctionnalités principales :</h4>
                     <ul>
-                        <li><strong>Classification automatique :</strong> Tri par catégories (Documents, Images, Musique, Vidéos, Archives, Applications)</li>
-                        <li><strong>Organisation temporelle :</strong> Classement par année et mois de création</li>
-                        <li><strong>Support multi-formats :</strong> Plus de 25 extensions supportées (.pdf, .docx, .jpg, .mp4, .zip, etc.)</li>
-                        <li><strong>Structure hiérarchique :</strong> Création automatique de dossiers organisés</li>
-                        <li><strong>Logging détaillé :</strong> Fichier Moving-process.log pour traçabilité complète</li>
-                        <li><strong>Gestion d'erreurs :</strong> Traitement des erreurs de permission et fichiers en double</li>
-                        <li><strong>Interface simple :</strong> Utilisation en ligne de commande avec guidage utilisateur</li>
+                        <li><strong>Classification automatique </strong> Tri par catégories (Documents, Images, Musique, Vidéos, Archives, Applications)</li>
+                        <li><strong>Organisation temporelle </strong> Classement par année et mois de création</li>
+                        <li><strong>Support multi-formats </strong> Plus de 25 extensions supportées (.pdf, .docx, .jpg, .mp4, .zip, etc.)</li>
+                        <li><strong>Structure hiérarchique </strong> Création automatique de dossiers organisés</li>
+                        <li><strong>Logging détaillé </strong> Fichier Moving-process.log pour traçabilité complète</li>
+                        <li><strong>Gestion d'erreurs </strong> Traitement des erreurs de permission et fichiers en double</li>
+                        <li><strong>Interface simple </strong> Utilisation en ligne de commande avec guidage utilisateur</li>
                     </ul>
                 </div>
                 <a class="project-link" href="https://github.com/GrandLay-e/FileArranger">
@@ -157,23 +190,26 @@
             </div>
             <div class="project-container card"> 
                 <h2 class="project-title">Jeu du Pendu</h2>
-                <span class="used-language">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" style="width:20px; height:20px; vertical-align:middle;">
-                    Python</span>
+                <div class="used-tech">
+                    <span class="used-language">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" style="width:20px; height:20px; vertical-align:middle;">
+                        Python
+                    </span>
+                </div>
                 <p class="project-description">
                     Jeu du pendu interactif en Python avec scraping web pour récupérer des mots aléatoires. Intègre la récupération de définitions et un système de logging avancé pour la pratique du web scraping.
                 </p>
                 <div class="project-features">
                     <h4>🔧 Fonctionnalités principales :</h4>
                     <ul>
-                        <li><strong>Scraping web :</strong> Récupération automatique de mots depuis usito.usherbrooke.ca</li>
-                        <li><strong>Validation regex :</strong> Filtrage des mots (5-10 caractères alphanumériques)</li>
-                        <li><strong>Définitions intégrées :</strong> Affichage des définitions des mots via scraping</li>
-                        <li><strong>Système de vies :</strong> Nombre de vies basé sur la longueur du mot</li>
-                        <li><strong>Sauvegarde locale :</strong> Stockage des mots dans un fichier words.txt</li>
-                        <li><strong>Logging complet :</strong> Fichier words.log pour traçabilité des connexions et erreurs</li>
-                        <li><strong>Interface console :</strong> Jeu interactif avec feedback utilisateur</li>
-                        <li><strong>Gestion d'erreurs :</strong> Traitement robuste des erreurs de connexion</li>
+                        <li><strong>Scraping web </strong> Récupération automatique de mots depuis usito.usherbrooke.ca</li>
+                        <li><strong>Validation regex </strong> Filtrage des mots (5-10 caractères alphanumériques)</li>
+                        <li><strong>Définitions intégrées </strong> Affichage des définitions des mots via scraping</li>
+                        <li><strong>Système de vies </strong> Nombre de vies basé sur la longueur du mot</li>
+                        <li><strong>Sauvegarde locale </strong> Stockage des mots dans un fichier words.txt</li>
+                        <li><strong>Logging complet </strong> Fichier words.log pour traçabilité des connexions et erreurs</li>
+                        <li><strong>Interface console </strong> Jeu interactif avec feedback utilisateur</li>
+                        <li><strong>Gestion d'erreurs </strong> Traitement robuste des erreurs de connexion</li>
                     </ul>
                 </div>
                 <a class="project-link" href="https://github.com/GrandLay-e/pendu">
@@ -181,25 +217,27 @@
                 </a>
             </div>
             <div class="project-container card"> 
-                <h2 class="project-title">ClientReparation</h2>
-                <span class="used-language">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png" alt="C# Logo" style="width:20px; height:20px; vertical-align:middle;">
-                    C Sharp
-                </span>
+                <h2 class="project-title">Chez le Mécano</h2>
+                <div class="used-tech">
+                    <span class="used-language">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png" alt="C# Logo" style="width:20px; height:20px; vertical-align:middle;">
+                        C Sharp
+                    </span>
+                </div>
                 <p class="project-description">
                     Exercice de programmation orientée objet (POO) en C# réalisé dans le cadre du BTS SIO. Système de gestion complet des réparations automobiles mettant en œuvre les concepts UML avancés.
                 </p>
                 <div class="project-features">
                     <h4>🔧 Fonctionnalités principales :</h4>
                     <ul>
-                        <li><strong>Architecture POO :</strong> Classes abstraites, héritage et polymorphisme</li>
-                        <li><strong>Gestion des entités :</strong> Clients, Mécaniciens, Voitures, Compétences, Réparations</li>
-                        <li><strong>Système de compétences :</strong> Mécaniciens avec compétences spécialisées</li>
-                        <li><strong>Validation des réparations :</strong> Vérification des compétences requises</li>
-                        <li><strong>Collections avancées :</strong> Gestion des listes de voitures et compétences</li>
-                        <li><strong>Interface utilisateur :</strong> Affichage détaillé des informations</li>
-                        <li><strong>Apprentissage dynamique :</strong> Mécaniciens peuvent acquérir de nouvelles compétences</li>
-                        <li><strong>Modélisation UML :</strong> Associations et relations entre objets</li>
+                        <li><strong>Architecture POO </strong> Classes abstraites, héritage et polymorphisme</li>
+                        <li><strong>Gestion des entités </strong> Clients, Mécaniciens, Voitures, Compétences, Réparations</li>
+                        <li><strong>Système de compétences </strong> Mécaniciens avec compétences spécialisées</li>
+                        <li><strong>Validation des réparations </strong> Vérification des compétences requises</li>
+                        <li><strong>Collections avancées </strong> Gestion des listes de voitures et compétences</li>
+                        <li><strong>Interface utilisateur </strong> Affichage détaillé des informations</li>
+                        <li><strong>Apprentissage dynamique </strong> Mécaniciens peuvent acquérir de nouvelles compétences</li>
+                        <li><strong>Modélisation UML </strong> Associations et relations entre objets</li>
                     </ul>
                 </div>
                 <a class="project-link" href="https://github.com/GrandLay-e/mecano">
@@ -208,23 +246,25 @@
             </div>
             <div class="project-container card"> 
                 <h2 class="project-title">Plus ou Moins</h2>
-                <span class="used-language">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png" alt="C# Logo" style="width:20px; height:20px; vertical-align:middle;">
-                    C Sharp
-                </span>
+                <div class="used-tech">
+                    <span class="used-language">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png" alt="C# Logo" style="width:20px; height:20px; vertical-align:middle;">
+                        C Sharp
+                    </span>
+                </div>
                 <p class="project-description">
                     Jeu de devinette classique en C# où le joueur doit deviner un nombre aléatoire généré par l'ordinateur entre 1 et 100. Application console interactive utilisant la classe Random de .NET.
                 </p>
                 <div class="project-features">
                     <h4>🔧 Fonctionnalités principales :</h4>
                     <ul>
-                        <li><strong>Génération aléatoire :</strong> Utilisation de la classe Random pour les nombres de 1 à 100</li>
-                        <li><strong>Interface interactive :</strong> Console avec feedback "Plus" ou "Moins"</li>
-                        <li><strong>Compteur de tentatives :</strong> Suivi du nombre d'essais</li>
-                        <li><strong>Validation des entrées :</strong> Gestion des saisies incorrectes</li>
-                        <li><strong>Logique de jeu :</strong> Algorithme de comparaison et guidage</li>
-                        <li><strong>Expérience utilisateur :</strong> Messages d'encouragement et félicitations</li>
-                        <li><strong>Boucle de jeu :</strong> Possibilité de rejouer</li>
+                        <li><strong>Génération aléatoire </strong> Utilisation de la classe Random pour les nombres de 1 à 100</li>
+                        <li><strong>Interface interactive </strong> Console avec feedback "Plus" ou "Moins"</li>
+                        <li><strong>Compteur de tentatives </strong> Suivi du nombre d'essais</li>
+                        <li><strong>Validation des entrées </strong> Gestion des saisies incorrectes</li>
+                        <li><strong>Logique de jeu </strong> Algorithme de comparaison et guidage</li>
+                        <li><strong>Expérience utilisateur </strong> Messages d'encouragement et félicitations</li>
+                        <li><strong>Boucle de jeu </strong> Possibilité de rejouer</li>
                     </ul>
                 </div>
                 <a class="project-link" href="https://github.com/GrandLay-e/PlusOuMoins">
@@ -266,6 +306,5 @@
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m296-224-56-56 240-240 240 240-56 56-184-183-184 183Zm0-240-56-56 240-240 240 240-56 56-184-183-184 183Z"/></svg>
         </a>
     </footer>
-    <script src="../js/scroll-to-top.js"></script>
 </body>
 </html>
