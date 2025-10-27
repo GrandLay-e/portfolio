@@ -60,6 +60,32 @@ a:hover {
     color: #ffbe5c;
 }
 
+.menu-toggle {
+    display: none;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    background: var(--accent-bg);
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+    transition: all var(--transition);
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+    background: #ffbe5c;
+}
+
+.menu-toggle svg {
+    width: 24px;
+    height: 24px;
+}
+
 nav {
     width: 100%;
     background: var(--secondary-bg);
@@ -69,6 +95,10 @@ nav {
     justify-content: center;
     padding: 18px 0;
     border-bottom: 2px solid #fca311;
+}
+
+nav.active {
+    transform: translateX(0);
 }
 
 nav ul {
@@ -182,7 +212,7 @@ li{
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 12px;
 }
-.card h3 {
+.education-section .card h3 {
     font-size: 1.1em;
     margin-top: 12px;
     margin-bottom: 6px;
@@ -231,8 +261,9 @@ li{
     width: 100%;
     border-radius: 8px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 5%;
+    /* use fixed pixel gaps to avoid percentage overflow/overlap issues */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
     padding: 16px;
 }
 .certif ul li {
@@ -243,6 +274,40 @@ li{
     transition: transform var(--transition), box-shadow var(--transition);
     text-align: center;
 }
+
+/* override for items that also use the generic .card class inside certifications
+   so they don't inherit heavy padding/absolute positioning used elsewhere */
+.certifications .certif ul li.card {
+    position: static;
+    padding: 16px;
+    margin-bottom: 0;
+}
+.external-link-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
+    background: var(--secondary-bg);
+    transition: all var(--transition);
+    margin-top: 12px;
+}
+
+.external-link-icon:hover {
+    background: var(--accent-bg);
+    transform: translateY(-2px) scale(1.1);
+}
+
+.external-link-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--text-muted);
+}
+
+.external-link-icon:hover svg {
+    fill: var(--primary-bg);
+}
+
 .certif ul li a{
     display: block;
     padding: 12px 16px;
@@ -255,12 +320,25 @@ li{
     transform: scale(1.04);
     box-shadow: 0 8px 24px #fca31155;
 }
+.certification-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.certification-content p {
+    flex-grow: 1;
+    margin: 12px 0;
+}
+
 .certifications .certif ul li h4 {
     border-bottom: 2px solid var(--accent-bg);
     padding-bottom: 6px;
     font-size: 1.1em;
     text-align: center;
     color: var(--accent-bg);
+    margin-bottom: 12px;
 }
 
 .competence_page section{
@@ -338,12 +416,98 @@ li{
 }
 
 .project-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35%, 1fr));
+    gap: 25px;
+}
+
+.experience-section {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     gap: 24px;
+    margin: 32px auto;
     padding: 24px;
+    max-width: 80%;
+}
+
+.experience-card {
+    position: relative;
+    padding: 24px;
+}
+
+.experience-title {
+    color: var(--text-main);
+    font-size: 1.6em;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.experience-date {
+    color: var(--accent-bg);
+    font-size: 1.1em;
+    margin: 8px 0;
+    font-weight: 500;
+}
+
+.experience-duration {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    margin: 4px 0 16px 0;
+    font-style: italic;
+}
+
+.experience-content {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.experience-content h3 {
+    color: var(--accent-bg);
+    border-bottom: 2px solid var(--accent-bg);
+    padding-bottom: 8px;
+    margin: 24px 0 16px 0;
+}
+
+.experience-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.experience-content ul ul {
+    padding-left: 20px;
+    margin: 8px 0;
+}
+
+.experience-content li {
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+.experience-content li strong {
+    color: var(--text-main);
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.skills-list li {
+    background: var(--secondary-bg);
+    padding: 12px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: all var(--transition);
+}
+
+.skills-list li:hover {
+    background: var(--accent-bg);
+    color: var(--primary-bg);
+    transform: translateY(-2px);
 }
 
 .project-container {
@@ -362,15 +526,19 @@ li{
 }
 .project-container a img {
     max-width: 100%;
-    height: auto;
-    margin-top: 2em;
     padding: 8px;
-    position: relative;
-    left: 45%;
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: var(--border-radius);
     box-shadow: 0 2px 8px #0007;
     background: #fff;
     transition: transform var(--transition);
+}
+
+.project-container {
+    padding-bottom: 64px;
 }
 
 footer {
@@ -434,8 +602,11 @@ footer section ul {
         padding: 12px;
     }
     .project-section {
-        gap: 12px;
-        padding: 12px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
     }
 }
 
@@ -444,12 +615,34 @@ footer section ul {
         font-size: 16px;
         overflow-x: hidden;
     }
-    nav {
-        flex-direction: column;
-        padding: 12px 0;
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 280px;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        padding: 20px;
+        z-index: 999;
+    }
+
+    nav.active {
+        transform: translateX(0);
+    }
+
     nav ul {
+        flex-direction: column;
         gap: 18px;
+        margin-top: 60px;
     }
     h1 {
         font-size: 2em;

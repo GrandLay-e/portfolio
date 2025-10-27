@@ -2,7 +2,7 @@
 
 ## 🎯 À propos
 
-Portfolio personnel d'**Abdallah Sow**, étudiant en deuxième année de BTS Services Informatiques aux Organisations (SIO), à la recherche d'une alternance en développement informatique.
+Portfolio personnel d'**Abdallah Sow**, étudiant en deuxième année de BTS Services Informatiques aux Organisations (SIO), à la recherche d'un stage en développement informatique.
 
 ## 👨‍💻 Profil
 
@@ -37,13 +37,17 @@ portfolio/
 
 ### Compétences Techniques
 - **Python** - Développement d'applications et web scraping
+- **Django** - Framework web Python
 - **PHP** - Développement web backend
+- **Laravel** - Framework PHP pour applications web
 - **SQL** - Gestion de bases de données
 - **C#** - Développement d'applications
 
 ### Outils et Environnements
 - **Git/GitHub** - Contrôle de version
-- **Visual Studio Code** - Éditeur de code
+- **Visual Studio** - Éditeur de code
+- **PyCharm** - IDE pour Python
+- **PhpStorm** - IDE pour PHP
 - **MySQL** - Base de données
 - **VMware** - Virtualisation
 - **Joomla** - CMS
@@ -111,6 +115,6 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 ---
 
-*Dernière mise à jour : Août 2025*
+*Dernière mise à jour : Octobre 2025*
 
-**En recherche active d'une alternance en développement informatique** 🚀
+**En recherche active d'un stage en développement informatique** 🚀

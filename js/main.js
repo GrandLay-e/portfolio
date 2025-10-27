@@ -1,5 +1,43 @@
 // Script pour le bouton de retour en haut
 document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    let isMenuOpen = false;
+
+    // Fonction pour fermer le menu
+    function closeMenu() {
+        nav.classList.remove('active');
+        isMenuOpen = false;
+    }
+
+    // Gestionnaire de clic pour le bouton menu
+    menuToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        nav.classList.toggle('active');
+        isMenuOpen = !isMenuOpen;
+    });
+
+    // Fermer le menu si on clique en dehors
+    document.addEventListener('click', function(e) {
+        if (isMenuOpen && !nav.contains(e.target) && e.target !== menuToggle) {
+            closeMenu();
+        }
+    });
+
+    // Fermer le menu après avoir cliqué sur un lien
+    nav.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+            closeMenu();
+        }
+    });
+
+    // Gestion de l'affichage du menu en fonction de la largeur de l'écran
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            nav.classList.remove('active');
+            isMenuOpen = false;
+        }
+    });
     const backToTopButton = document.querySelector('.back-to-top');
     
     if (backToTopButton) {
