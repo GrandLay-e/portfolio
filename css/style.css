@@ -132,8 +132,8 @@ nav ul li a:hover {
 }
 
 nav ul li a .material-symbols-outlined {
-    font-size: 48px;
-    font-weight: 400;
+    font-size: 24px;
+    font-weight: 300;
     transition: all var(--transition);
     margin-bottom: 8px;
 }
