@@ -225,6 +225,22 @@ li{
     text-align: center;
     color: var(--accent-bg);
 }
+
+/* Page de veille : les sous-titres (3.1, 4.1, 4.2, ...) sont affichés
+   au-dessus de leur contenu, dans le flux normal, avec une ligne dessous. */
+.veille-section .card h3 {
+    position: static;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.15em;
+    font-weight: 600;
+    text-align: left;
+    color: var(--accent-bg);
+    border-top: none;
+    padding-top: 0;
+    border-bottom: 2px solid var(--accent-bg);
+    padding-bottom: 4px;
+}
 .card h4 {
     font-size: 1em;
     margin: 6px 0;
@@ -386,6 +402,12 @@ li{
     cursor: pointer;
     transform: scale(1.05);
     box-shadow: 0 8px 24px #fca31155;
+}
+.competence_page section ul li:hover a,
+.education-section div.card ul li:hover a,
+.project-features ul li:hover a,
+.certif ul li:hover a {
+    color: var(--primary-bg);
 }
 .used-tech{
     display: flex;
