@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-887RENWPTQ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-887RENWPTQ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="../../js/main.js" defer></script>
+    <title>Stage 1re année - NEOSIT</title>
+    <meta name="description" content="Détails du stage de première année: webmastering, SEO et projet EYREIN PRODUCTS.">
+    <meta name="author" content="Abdallah Sow">
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/193377484?v=4">
+    <style>
+        .stage-gallery { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
+        .stage-gallery img { flex: 1 1 320px; max-width: 48%; min-width: 260px; width: 100%; height: auto; border-radius: 10px; object-fit: cover; }
+        .stage-code { background: #111827; color: #f8fafc; padding: 12px; border-radius: 10px; overflow-x: auto; font-size: 0.92rem; }
+    </style>
+</head>
+<body>
+    <button class="menu-toggle" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1a2236"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+    </button>
+    <nav>
+        <ul>
+            <li><a href="../../index.html"><span class="material-symbols-outlined">home</span><span class="nav-text">Accueil</span></a></li>
+            <li><a href="../parcours.html"><span class="material-symbols-outlined">school</span><span class="nav-text">Formation</span></a></li>
+            <li><a href="../experiences.html"><span class="material-symbols-outlined">work</span><span class="nav-text">Expériences</span></a></li>
+            <li><a href="../competences.html"><span class="material-symbols-outlined">psychology</span><span class="nav-text">Compétences</span></a></li>
+            <li><a href="../projets.html"><span class="material-symbols-outlined">code</span><span class="nav-text">Projets</span></a></li>
+            <li><a href="../veille.html"><span class="material-symbols-outlined">travel_explore</span><span class="nav-text">Veille</span></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="project-section" style="margin-top: 20px;">
+            <div class="card project-container">
+                <p style="margin:0; font-weight:600;">Navigation entre stages</p>
+                <p style="margin-top:8px;"><a href="2.html" class="github-link">Aller au stage 2e année</a></p>
+            </div>
+        </section>
+
+        <h1>Stage de 1re année - NEOSIT</h1>
+
+        <section class="project-section">
+            <div class="card project-container">
+                <h2 class="project-title">Contexte et objectifs</h2>
+                <p class="project-description">Période: Juin 2025 (1 mois) - BTS SIO 1re année.</p>
+                <p class="project-description">Mission principale: améliorer la présence web de NEOSIT (Joomla + SEO) et lancer le projet EYREIN PRODUCTS pour automatiser la récupération et la publication de fiches produits.</p>
+                <div class="used-tech">
+                    <span class="used-language">Joomla</span>
+                    <span class="used-language">PHP</span>
+                    <span class="used-language">JavaScript</span>
+                    <span class="used-language">Python</span>
+                    <span class="used-language">Flask</span>
+                    <span class="used-language">BeautifulSoup</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="card project-container">
+                <h2 class="project-title">Webmastering, contenu et SEO</h2>
+                <div class="project-features">
+                    <ul>
+                        <li>Administration Joomla et mise à jour de contenus métiers.</li>
+                        <li>Optimisation des pages: structure, lisibilité et métadonnées.</li>
+                        <li>Maintenance corrective PHP/JS sur des modules existants.</li>
+                        <li>Préparation de la base documentaire qui sera ensuite optimisée en 2e année.</li>
+                    </ul>
+                </div>
+                <div class="stage-gallery">
+                    <img src="../../Stage/images/image-2.png" alt="Page de catégorie avant optimisation">
+                    <img src="../../Stage/images/image-1.png" alt="Page fiche technique produit">
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="card project-container">
+                <h2 class="project-title">Projet EYREIN PRODUCTS: architecture</h2>
+                <p class="project-description">J'ai conçu un pipeline complet: scraping des produits EYREIN, structuration en JSON, téléchargement des ressources (PDF/images), puis exposition via API Flask.</p>
+                <pre class="stage-code"><code>MAIN_URL = "https://www.eyrein-industrie.com/"
+SHOP_URL = "https://boutique.eyrein-industrie.com/"
+BLOCK = ".column.small-12.medium-6.large-4 a"
+REF = ".product--reference span"
+TITLE = ".product--title"</code></pre>
+                <p class="project-description">Le projet a été découpé en classes métier (Product/Category), fonctions de scraping, module de téléchargement et API REST.</p>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="card project-container">
+                <h2 class="project-title">Scraping et structuration des données</h2>
+                <p class="project-description">La logique récupère les catégories, parcourt toutes les pages paginées, évite les doublons produits puis extrait les liens de fiches et images.</p>
+                <pre class="stage-code"><code>for block in product_blocks:
+    product_url = urljoin(SHOP_URL, block['href'])
+    if product_url in seen_products:
+        continue
+    seen_products.add(product_url)</code></pre>
+                <pre class="stage-code"><code>product = Product(product_ref, product_name, product_url,
+                  tech_sheet, safety_sheet, image)
+category.products.append(product)
+DATA.append(category.format_category())</code></pre>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="card project-container">
+                <h2 class="project-title">Téléchargement automatisé des fiches</h2>
+                <p class="project-description">Le script crée un dossier par produit, télécharge les fiches techniques/sécurité, télécharge l'image et génère une archive ZIP.</p>
+                <pre class="stage-code"><code>response = requests.get(url, stream=True)
+response.raise_for_status()
+dest_path.parent.mkdir(parents=True, exist_ok=True)
+for chunk in response.iter_content(chunk_size=8192):
+    f.write(chunk)</code></pre>
+                <pre class="stage-code"><code>zip_path = dir / f"{product.name.upper()}_FICHES.zip"
+with zipfile.ZipFile(zip_path, 'w') as zipf:
+    if tech_path.exists():
+        zipf.write(tech_path, arcname=tech_path.name)</code></pre>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="card project-container">
+                <h2 class="project-title">API Flask pour exploitation interne</h2>
+                <p class="project-description">L'API exposait les données en JSON ou HTML et permettait aussi de filtrer uniquement les références utilisées par l'entreprise.</p>
+                <pre class="stage-code"><code>@app.route('/products/format=&lt;string:format&gt;/', methods=['GET'])
+def get_products(format):
+    if format == "json":
+        return jsonify(formatted_products)</code></pre>
+                <pre class="stage-code"><code>@app.route('/products/myproducts/key=&lt;string:key&gt;/format=&lt;string:format&gt;/')
+def get_my_products_by_key(key, format):
+    my_products = {ref: get_product_by_ref(ref, format, True)
+                   for ref in USED_PRODUCTS_REF}</code></pre>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="card project-container">
+                <h2 class="project-title">Compétences consolidées</h2>
+                <div class="project-features">
+                    <ul>
+                        <li>Conception de scripts Python orientés production.</li>
+                        <li>Manipulation d'API, JSON, et transformations de données.</li>
+                        <li>Maintenance web sur CMS et code legacy.</li>
+                        <li>Approche orientée automatisation et gain de temps opérationnel.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Pour toute question ou collaboration, n'hésitez pas à me contacter :</p>
+            <ul>
+                <li><a href="mailto:contact@grandlaye.fr" title="Email"><img src="https://img.icons8.com/ios-filled/24/ffffff/new-post.png" alt="Email" style="vertical-align:middle; margin-right:8px;">contact@grandlaye.fr</a></li>
+                <li><a href="https://www.linkedin.com/in/sowabdallah/" target="_blank" title="LinkedIn"><img src="https://img.icons8.com/ios-filled/24/ffffff/linkedin.png" alt="LinkedIn" style="vertical-align:middle; margin-right:8px;">Abdallah Sow</a></li>
+                <li><a href="https://github.com/grandlay-e" target="_blank" title="GitHub"><img src="https://img.icons8.com/ios-glyphs/24/ffffff/github.png" alt="GitHub" style="vertical-align:middle; margin-right:8px;">GrandLay-e</a></li>
+            </ul>
+        </section>
+        <section class="copyright"><p align="center"> ©2025 Abdallah Sow. Tous droits réservés.</p></section>
+        <a href="#" class="back-to-top" title="Retour en haut"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m296-224-56-56 240-240 240 240-56 56-184-183-184 183Zm0-240-56-56 240-240 240 240-56 56-184-183-184 183Z"/></svg></a>
+    </footer>
+</body>
+</html>
+
+
