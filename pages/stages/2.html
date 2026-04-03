@@ -49,6 +49,23 @@
 
         <h1>Stage de 2e année - NEOSIT</h1>
 
+        <section class="project-section" id="sommaire">
+            <div class="card project-container">
+                <h2 class="project-title">Sommaire des missions</h2>
+                <div class="project-features">
+                    <ul>
+                        <li><a href="#mission-phoca">Mission 1 - Phoca Download (UX + traduction)</a></li>
+                        <li><a href="#mission-api">Mission 2 - Migration API SIRENE</a></li>
+                        <li><a href="#mission-pdf">Mission 3 - PDF + signature + Base64</a></li>
+                        <li><a href="#mission-securisation">Mission 4 - Sécurisation des uploads</a></li>
+                        <li><a href="#mission-renommage">Mission 5 - Renommage CV/LM/RIB</a></li>
+                        <li><a href="#mission-rsform">Mission 6 - RSForm (types + fréquence)</a></li>
+                        <li><a href="#mission-python">Python comme accélérateur</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <section class="project-section">
             <div class="card project-container">
                 <h2 class="project-title">Cadre du stage</h2>
@@ -61,27 +78,55 @@
             </div>
         </section>
 
-        <section class="project-section">
+        <section class="project-section" id="mission-phoca">
             <div class="card project-container">
-                <h2 class="project-title">Janvier: UX documents et traduction Phoca Download</h2>
-                <p class="project-description">J'ai corrigé la lisibilité des pages fiches techniques/sécurité (marges, espace visuel) puis francisé les libellés du composant.</p>
+                <h2 class="project-title">Mission 1 - Phoca Download (UX + traduction FR)</h2>
+                <p class="project-description"><strong>Contexte:</strong> Les pages documents étaient trop collées aux bords et certains libellés restaient en anglais.</p>
+                <p class="project-description"><strong>Objectif:</strong> améliorer la lisibilité et livrer une interface totalement francisée.</p>
+                <p class="project-description"><strong>Stack:</strong> Joomla, CSS, fichiers de langue INI.</p>
+                <div class="project-features">
+                    <h4>Étapes réalisées</h4>
+                    <ul>
+                        <li>Recherche des bons fichiers via l'arborescence composant + langue.</li>
+                        <li>Ajustement CSS de la vue catégorie.</li>
+                        <li>Traduction des constantes clés de tri/filtre/recherche.</li>
+                    </ul>
+                </div>
                 <pre class="stage-code"><code>.pd-category-view {
     margin-left : 5%;
     margin-right : 5%;
 }</code></pre>
+                <pre class="stage-code"><code>COM_PHOCADOWNLOAD_FILTER="Filtrer"
+COM_PHOCADOWNLOAD_SEARCH="Rechercher"
+COM_PHOCADOWNLOAD_RESET="Réinitialiser"
+COM_PHOCADOWNLOAD_NO_ITEMS="Aucun élément trouvé"</code></pre>
                 <div class="stage-gallery">
                     <img src="../../Stage/images/image-2.png" alt="Avant marges CSS">
+                    <img src="../../Stage/images/image-1.png" alt="Avant fiche produit">
                     <img src="../../Stage/images/image-3.png" alt="Après marges CSS">
                     <img src="../../Stage/images/image-4.png" alt="Avant traduction">
                     <img src="../../Stage/images/image-5.png" alt="Après traduction">
                 </div>
+                <p class="project-description"><strong>Défis:</strong> identifier les bons points d'entrée dans un CMS avec plusieurs couches (composant, template, langue).</p>
+                <p class="project-description"><strong>Résultat:</strong> UX plus claire et interface cohérente pour des utilisateurs francophones.</p>
+                <p class="project-description"><strong>Ce que j'ai appris:</strong> partir du besoin utilisateur puis remonter techniquement vers les bons fichiers.</p>
             </div>
         </section>
 
-        <section class="project-section">
+        <section class="project-section" id="mission-api">
             <div class="card project-container">
-                <h2 class="project-title">Intégration API entreprises: SIRENE puis migration</h2>
-                <p class="project-description">Après une première intégration API SIRENE, j'ai migré vers Recherche Entreprises pour gagner en fiabilité, simplicité et disponibilité.</p>
+                <h2 class="project-title">Mission 2 - Migration API SIRENE vers Recherche Entreprises</h2>
+                <p class="project-description"><strong>Contexte:</strong> l'API SIRENE causait des incohérences (auth, maintenance, qualité des retours).</p>
+                <p class="project-description"><strong>Objectif:</strong> fiabiliser l'autoremplissage SIREN avec une API plus simple.</p>
+                <p class="project-description"><strong>Stack:</strong> JavaScript, PHP, API publique gouv.fr.</p>
+                <div class="project-features">
+                    <h4>Étapes réalisées</h4>
+                    <ul>
+                        <li>Étude des limites SIRENE et critères de migration.</li>
+                        <li>Adaptation du proxy PHP au nouvel endpoint.</li>
+                        <li>Mise à jour du script front + tests locaux (valides/invalides).</li>
+                    </ul>
+                </div>
                 <pre class="stage-code"><code>fetch('apiRechercheEntreprise.php?q=' + siren)
   .then(r =&gt; r.json())
   .then(data =&gt; {
@@ -97,67 +142,96 @@ echo json_encode([
                     <img src="../../Stage/images/image-15.png" alt="Autoremplissage formulaire">
                     <img src="../../Stage/images/maintenanceSiren.png" alt="Maintenance API SIRENE">
                 </div>
+                <p class="project-description"><strong>Défis:</strong> conserver une UX fluide malgré les différences de format de réponse entre APIs.</p>
+                <p class="project-description"><strong>Résultat:</strong> autoremplissage plus stable, sans dépendance OAuth complexe.</p>
+                <p class="project-description"><strong>Ce que j'ai appris:</strong> choisir une solution technique pour sa robustesse opérationnelle, pas seulement sa légitimité « officielle ».</p>
             </div>
         </section>
 
-        <section class="project-section">
+        <section class="project-section" id="mission-pdf">
             <div class="card project-container">
-                <h2 class="project-title">Automatisation des adresses et validation</h2>
-                <p class="project-description">J'ai automatisé la recopie des adresses selon les choix utilisateur et ajouté des contrôles de saisie pour réduire les erreurs avant soumission.</p>
-                <pre class="stage-code"><code>if (radioValue === "Identique à l'adresse du siège social") {
-    var siegeSocial = jQuery('[name="form[siegeSocial]"]').val();
-    jQuery('[name="form[lieuIntervention]"]').val(siegeSocial);
-}</code></pre>
-                <div class="stage-gallery">
-                    <img src="../../Stage/images/reggex.png" alt="Validation regex des adresses">
+                <h2 class="project-title">Mission 3 - Génération PDF + signature + Base64</h2>
+                <p class="project-description"><strong>Contexte:</strong> besoin d'un PDF récapitulatif fiable avec signature client.</p>
+                <p class="project-description"><strong>Objectif:</strong> produire un document final directement exploitable par l'équipe métier.</p>
+                <p class="project-description"><strong>Stack:</strong> HTML, JS, SignaturePad, PHP, Base64.</p>
+                <div class="project-features">
+                    <h4>Étapes réalisées</h4>
+                    <ul>
+                        <li>Création du template HTML du PDF.</li>
+                        <li>Capture de signature sur canvas.</li>
+                        <li>Encodage Base64 et injection au moment de la génération.</li>
+                    </ul>
                 </div>
-            </div>
-        </section>
-
-        <section class="project-section">
-            <div class="card project-container">
-                <h2 class="project-title">Génération PDF et signature électronique</h2>
-                <p class="project-description">J'ai conçu un template PDF récapitulatif et une signature électronique maison (SignaturePad), évitant un plugin payant.</p>
-                <pre class="stage-code"><code>if (signaturePad.isEmpty()) {
-    e.preventDefault();
-    errorP.style.display = 'block';
-    return false;
-}</code></pre>
+                <pre class="stage-code"><code>&lt;div class="header"&gt;
+  &lt;img src="data:image/png;base64,..." alt="Logo"&gt;
+  &lt;h2&gt;Informations du site de {raisonSociale:value}&lt;/h2&gt;
+&lt;/div&gt;</code></pre>
                 <pre class="stage-code"><code>signatureInput.value =
     signaturePad.toDataURL('image/png');
 </code></pre>
+                <pre class="stage-code"><code>$signature = $_POST['form']['signatureClient'] ?? '';
+if (strpos($signature, 'data:image/png;base64,') === 0) {
+    // Injectée ensuite dans le template PDF
+}</code></pre>
                 <div class="stage-gallery">
                     <img src="../../Stage/images/image-12.png" alt="PDF page 1">
                     <img src="../../Stage/images/image-13.png" alt="PDF page 2">
                     <img src="../../Stage/images/image-14.png" alt="Signature électronique">
                 </div>
+                <p class="project-description"><strong>Défis:</strong> contourner les limites du plugin PDF pour les images dynamiques.</p>
+                <p class="project-description"><strong>Résultat:</strong> PDF complet avec signature intégrée, sans plugin additionnel payant.</p>
+                <p class="project-description"><strong>Ce que j'ai appris:</strong> le Base64 est un excellent pont entre UX front et génération documentaire côté serveur.</p>
             </div>
         </section>
 
-        <section class="project-section">
+        <section class="project-section" id="mission-securisation">
             <div class="card project-container">
-                <h2 class="project-title">Sécurisation des uploads et renommage fichiers</h2>
-                <p class="project-description">J'ai sécurisé l'accès aux fichiers uploadés puis implémenté un renommage horodaté pour éviter les écrasements entre documents homonymes.</p>
+                <h2 class="project-title">Mission 4 - Sécurisation des fichiers uploadés</h2>
+                <p class="project-description"><strong>Contexte:</strong> documents sensibles accessibles directement depuis le web.</p>
+                <p class="project-description"><strong>Objectif:</strong> conserver le fonctionnement métier tout en bloquant l'accès public.</p>
+                <p class="project-description"><strong>Stack:</strong> Linux permissions, FileZilla, Joomla/RSForm.</p>
                 <pre class="stage-code"><code>chmod 750 /components/com_rsform/uploads/</code></pre>
+                <div class="stage-gallery">
+                    <img src="../../Stage/images/image-8.png" alt="Permissions FileZilla">
+                    <img src="../../Stage/images/image-9.png" alt="Avant sécurisation fichiers">
+                    <img src="../../Stage/images/image-10.png" alt="Après sécurisation fichiers">
+                </div>
+                <p class="project-description"><strong>Défis:</strong> sécuriser sans casser les traitements existants.</p>
+                <p class="project-description"><strong>Résultat:</strong> uploads toujours fonctionnels, mais accès direct public neutralisé.</p>
+                <p class="project-description"><strong>Ce que j'ai appris:</strong> la sécurité infra simple et bien ciblée apporte un fort impact immédiat.</p>
+            </div>
+        </section>
+
+        <section class="project-section" id="mission-renommage">
+            <div class="card project-container">
+                <h2 class="project-title">Mission 5 - Renommage sécurisé CV/LM/RIB</h2>
+                <p class="project-description"><strong>Contexte:</strong> risque de collision de noms et d'écrasement de fichiers.</p>
+                <p class="project-description"><strong>Objectif:</strong> garantir un nom unique, lisible et traçable pour chaque document.</p>
+                <p class="project-description"><strong>Stack:</strong> PHP, validation d'extension, nettoyage de chaîne, horodatage.</p>
                 <pre class="stage-code"><code>function cleanStr($filename) {
     $filename = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $filename);
     $filename = preg_replace('/[^a-z0-9]/', '-', $filename);
     return trim(preg_replace('/-+/', '-', $filename), '-');
 }</code></pre>
+                <pre class="stage-code"><code>$_FILES['form']['name']['cv'] =
+  'CV-' . $prenom . '-' . $nom . '-' . date('dmY-His') . '.pdf';
+</code></pre>
                 <div class="stage-gallery">
-                    <img src="../../Stage/images/image-8.png" alt="Permissions FileZilla">
-                    <img src="../../Stage/images/image-9.png" alt="Avant sécurisation fichiers">
-                    <img src="../../Stage/images/image-10.png" alt="Après sécurisation fichiers">
                     <img src="../../Stage/images/image-11.png" alt="Ajout RIB formulaire">
                     <img src="../../Stage/images/image-16.png" alt="Exemple fichier renommé">
                 </div>
+                <p class="project-description"><strong>Défis:</strong> uniformiser les formats de noms tout en conservant la lisibilité.</p>
+                <p class="project-description"><strong>Résultat:</strong> plus de collision de noms et un archivage bien plus fiable.</p>
+                <p class="project-description"><strong>Ce que j'ai appris:</strong> la normalisation des entrées est essentielle pour la stabilité long terme.</p>
             </div>
         </section>
 
-        <section class="project-section">
+        <section class="project-section" id="mission-rsform">
             <div class="card project-container">
-                <h2 class="project-title">Automatisation RSForm: types de champs et fréquence</h2>
-                <p class="project-description">J'ai scripté une conversion XML de champs texte en cases à cocher, puis ajouté une validation dynamique fréquence/jours pour bloquer les incohérences de saisie.</p>
+                <h2 class="project-title">Mission 6 - RSForm (types de champs + validation fréquence)</h2>
+                <p class="project-description"><strong>Contexte:</strong> formulaires hétérogènes (texte libre) et incohérences fréquence/jours.</p>
+                <p class="project-description"><strong>Objectif:</strong> standardiser les réponses et empêcher les combinaisons invalides.</p>
+                <p class="project-description"><strong>Stack:</strong> Python (XML), JavaScript, RSForm.</p>
                 <pre class="stage-code"><code>if '&lt;ComponentTypeId&gt;1&lt;/ComponentTypeId&gt;' in field_block:
     name_match = re.search(r'Nature_du_sol', field_block)
     if name_match:
@@ -169,6 +243,48 @@ echo json_encode([
                 <div class="stage-gallery">
                     <img src="../../Stage/images/image-frequence-avant.png" alt="Validation fréquence avant">
                     <img src="../../Stage/images/image-frequence-après.png" alt="Validation fréquence après">
+                </div>
+                <p class="project-description"><strong>Défis:</strong> adapter la logique au markup réel de RSForm et à ses réactivations automatiques.</p>
+                <p class="project-description"><strong>Résultat:</strong> formulaire plus cohérent, moins d'erreurs métier côté soumission.</p>
+                <p class="project-description"><strong>Ce que j'ai appris:</strong> un petit script ciblé peut éviter beaucoup de reprise manuelle côté exploitation.</p>
+            </div>
+        </section>
+
+        <section class="project-section" id="mission-python">
+            <div class="card project-container">
+                <h2 class="project-title">Python comme accélérateur de productivité</h2>
+                <p class="project-description">J'ai utilisé Python comme outil d'atelier: pas forcément livré en production, mais crucial pour aller vite sur les tâches répétitives et de transformation.</p>
+                <div class="project-features">
+                    <h4>Exemples de gains</h4>
+                    <ul>
+                        <li>Conversion de dizaines de champs XML en une exécution.</li>
+                        <li>Vérifications automatisées avant intégration sur Joomla.</li>
+                        <li>Tests rapides d'API et extraction de données pour valider les formats.</li>
+                    </ul>
+                </div>
+                <pre class="stage-code"><code>before_count = len(re.findall(pattern_text, content, re.DOTALL))
+new_content = re.sub(field_pattern, convert_field, content, flags=re.DOTALL)
+remaining_text = len(re.findall(pattern_text, new_content, re.DOTALL))
+print(before_count, remaining_text)</code></pre>
+                <p class="project-description"><strong>Ce que j'ai appris:</strong> traiter Python comme un levier de vitesse et de fiabilité, même pour des scripts « hors site ».</p>
+            </div>
+        </section>
+
+        <section class="project-section" id="sources">
+            <div class="card project-container">
+                <h2 class="project-title">Sources techniques utilisées</h2>
+                <div class="project-features">
+                    <ul>
+                        <li><a href="../../Stage/README.md">README détaillé du stage 2</a></li>
+                        <li><a href="../../Stage/TestAPiSirene/script.js">script.js - autoremplissage entreprise</a></li>
+                        <li><a href="../../Stage/TestAPiSirene/apiRechercheEntreprise.php">apiRechercheEntreprise.php - proxy API</a></li>
+                        <li><a href="../../Stage/TestFormulaireFacturation/signature.js">signature.js - signature numérique</a></li>
+                        <li><a href="../../Stage/champsFréquences/script.js">script.js - validation fréquence/jours</a></li>
+                        <li><a href="../../Stage/ChangerTypeDeChamp/changeType.py">changeType.py - conversion XML</a></li>
+                        <li><a href="../../Stage/renommageDeDocuments/cv.php">cv.php - renommage CV</a></li>
+                        <li><a href="../../Stage/renommageDeDocuments/lm.php">lm.php - renommage LM</a></li>
+                        <li><a href="../../Stage/renommageDeDocuments/Rib.php">Rib.php - renommage RIB</a></li>
+                    </ul>
                 </div>
             </div>
         </section>
