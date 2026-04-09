@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="../../js/main.js" defer></script>
     <title>Stage 1re année - NEOSIT</title>
-    <meta name="description" content="Détails du stage de première année: webmastering, SEO et projet EYREIN PRODUCTS.">
+    <meta name="description" content="Détails du stage de première année: webmastering, SEO.">
+    <meta name="keywords" content="Stage Développement BTS SIO, webmastering, SEO, google search console">
     <meta name="author" content="Abdallah Sow">
     <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/193377484?v=4">
     <style>
@@ -77,8 +78,8 @@
                     </ul>
                 </div>
                 <div class="stage-gallery">
-                    <img src="../../Stage/images/image-2.png" alt="Page de catégorie avant optimisation">
-                    <img src="../../Stage/images/image-1.png" alt="Page fiche technique produit">
+                    <img src="../../Stage/imagesStage2/image-2.png" alt="Page de catégorie avant optimisation">
+                    <img src="../../Stage/imagesStage2/image-1.png" alt="Page fiche technique produit">
                 </div>
             </div>
         </section>
@@ -87,11 +88,15 @@
             <div class="card project-container">
                 <h2 class="project-title">Projet EYREIN PRODUCTS: architecture</h2>
                 <p class="project-description">J'ai conçu un pipeline complet: scraping des produits EYREIN, structuration en JSON, téléchargement des ressources (PDF/images), puis exposition via API Flask.</p>
-                <pre class="stage-code"><code>MAIN_URL = "https://www.eyrein-industrie.com/"
-SHOP_URL = "https://boutique.eyrein-industrie.com/"
-BLOCK = ".column.small-12.medium-6.large-4 a"
-REF = ".product--reference span"
-TITLE = ".product--title"</code></pre>
+                <pre class="stage-code">
+                    <code>
+                        MAIN_URL = "https://www.eyrein-industrie.com/"
+                        SHOP_URL = "https://boutique.eyrein-industrie.com/"
+                        BLOCK = ".column.small-12.medium-6.large-4 a"
+                        REF = ".product--reference span"
+                        TITLE = ".product--title"
+                    </code>
+                </pre>
                 <p class="project-description">Le projet a été découpé en classes métier (Product/Category), fonctions de scraping, module de téléchargement et API REST.</p>
             </div>
         </section>
