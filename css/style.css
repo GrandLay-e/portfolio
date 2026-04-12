@@ -682,6 +682,97 @@ li{
     font-weight: 600;
 }
 
+.stage-mission-section {
+    margin-top: 24px;
+}
+
+.stage-mission-card {
+    padding-bottom: 28px;
+}
+
+.mission-subsection {
+    margin: 18px 0;
+    padding: 16px;
+    background: rgba(26, 34, 54, 0.45);
+    border: 1px solid rgba(252, 163, 17, 0.18);
+    border-radius: 10px;
+}
+
+.mission-subsection h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: var(--accent-bg);
+    font-size: 1.1em;
+}
+
+.mission-subsection ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+}
+
+.mission-subsection ul li {
+    background: rgba(35, 43, 69, 0.9);
+    border-radius: 8px;
+    padding: 10px 12px;
+    color: var(--text-muted);
+    border-left: 3px solid var(--accent-bg);
+}
+
+.mission-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.mission-tool {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #2d3a5a, #1e283c);
+    color: var(--accent-bg);
+    border: 1px solid rgba(252, 163, 17, 0.35);
+    border-radius: 999px;
+    padding: 7px 12px;
+    font-size: 0.9em;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.mission-task-list {
+    display: grid;
+    gap: 12px;
+}
+
+.mission-task-item {
+    background: rgba(35, 43, 69, 0.92);
+    border-radius: 10px;
+    border: 1px solid rgba(252, 163, 17, 0.22);
+    padding: 12px;
+}
+
+.mission-task-item p {
+    margin: 0;
+    color: var(--text-main);
+    text-align: left;
+}
+
+.mission-task-item img {
+    width: 100%;
+    min-height: 180px;
+    max-height: 360px;
+    object-fit: cover;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px dashed rgba(252, 163, 17, 0.45);
+    background: rgba(26, 34, 54, 0.85);
+}
+
+.mission-task-item img[src=""] {
+    min-height: 180px;
+}
+
 /* Styles des images dans les projets */
 .project-container img {
     max-width: 100%;
@@ -924,6 +1015,14 @@ main > h1 {
         padding: 20px;
     }
 
+    .mission-subsection {
+        padding: 12px;
+    }
+
+    .mission-task-item img {
+        min-height: 150px;
+    }
+
     .experiences-timeline::before {
         left: 20px;
     }
@@ -999,6 +1098,15 @@ main > h1 {
     .project-title {
         font-size: 1.3em;
     }
+
+    .mission-tool {
+        font-size: 0.82em;
+    }
+
+    .mission-task-item img {
+        min-height: 120px;
+    }
+
     .used-language {
         font-size: 0.8em;
         padding: 6px 10px;

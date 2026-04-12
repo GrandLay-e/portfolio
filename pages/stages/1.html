@@ -41,122 +41,145 @@
     </nav>
 
     <main>
-        <section class="project-section" style="margin-top: 20px;">
-            <div class="card project-container">
-                <p style="margin:0; font-weight:600;">Navigation entre stages</p>
-                <p style="margin-top:8px;"><a href="2.html" class="github-link">Aller au stage 2e année</a></p>
-            </div>
-        </section>
+        <h1>Stage 1re année - NEOSIT</h1>
 
-        <h1>Stage de 1re année - NEOSIT</h1>
+        <section class="project-section stage-mission-section" id="mission-referencement">
+            <div class="card project-container stage-mission-card">
+                <h2 class="project-title">Référencement</h2>
 
-        <section class="project-section">
-            <div class="card project-container">
-                <h2 class="project-title">Contexte et objectifs</h2>
-                <p class="project-description">Période: Juin 2025 (1 mois) - BTS SIO 1re année.</p>
-                <p class="project-description">Mission principale: améliorer la présence web de NEOSIT (Joomla + SEO) et lancer le projet EYREIN PRODUCTS pour automatiser la récupération et la publication de fiches produits.</p>
-                <div class="used-tech">
-                    <span class="used-language">Joomla</span>
-                    <span class="used-language">PHP</span>
-                    <span class="used-language">JavaScript</span>
-                    <span class="used-language">Python</span>
-                    <span class="used-language">Flask</span>
-                    <span class="used-language">BeautifulSoup</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="project-section">
-            <div class="card project-container">
-                <h2 class="project-title">Webmastering, contenu et SEO</h2>
-                <div class="project-features">
+                <div class="mission-subsection mission-objectifs">
+                    <h3>Objectifs</h3>
                     <ul>
-                        <li>Administration Joomla et mise à jour de contenus métiers.</li>
-                        <li>Optimisation des pages: structure, lisibilité et métadonnées.</li>
-                        <li>Maintenance corrective PHP/JS sur des modules existants.</li>
-                        <li>Préparation de la base documentaire qui sera ensuite optimisée en 2e année.</li>
+                        <li>Augmenter la visibilité du site de l'entreprise sur les moteurs de recherche.</li>
+                        <li>Attirer un trafic qualifié pour générer davantage de contacts commerciaux.</li>
                     </ul>
                 </div>
-                <div class="stage-gallery">
-                    <img src="../../Stage/imagesStage2/image-2.png" alt="Page de catégorie avant optimisation">
-                    <img src="../../Stage/imagesStage2/image-1.png" alt="Page fiche technique produit">
+
+                <div class="mission-subsection mission-outils">
+                    <h3>Outils</h3>
+                    <div class="mission-tools">
+                        <span class="mission-tool">Google Search Console</span>
+                        <span class="mission-tool">SemRush</span>
+                        <span class="mission-tool">Sitemap Generator</span>
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-taches">
+                    <h3>Tâches réalisées</h3>
+                    <div class="mission-task-list">
+                        <div class="mission-task-item">
+                            <p>Publication d'articles de contenu avec mots-clés pertinents et ciblés.</p>
+                            <img src="" alt="Illustration de la publication d'articles SEO">
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Surveillance des performances via Google Search Console et SemRush.</p>
+                            <img src="" alt="Illustration du suivi des performances SEO">
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Identification et résolution des problèmes de référencement.</p>
+                            <img src="" alt="Illustration de la résolution de problèmes de référencement">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-apprentissages">
+                    <h3>Ce que j'ai appris</h3>
+                    <ul>
+                        <li>Stratégies SEO et optimisation on-page.</li>
+                        <li>Utilisation d'outils d'analyse et de suivi des performances.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section class="project-section">
-            <div class="card project-container">
-                <h2 class="project-title">Projet EYREIN PRODUCTS: architecture</h2>
-                <p class="project-description">J'ai conçu un pipeline complet: scraping des produits EYREIN, structuration en JSON, téléchargement des ressources (PDF/images), puis exposition via API Flask.</p>
-                <pre class="stage-code">
-                    <code>
-                        MAIN_URL = "https://www.eyrein-industrie.com/"
-                        SHOP_URL = "https://boutique.eyrein-industrie.com/"
-                        BLOCK = ".column.small-12.medium-6.large-4 a"
-                        REF = ".product--reference span"
-                        TITLE = ".product--title"
-                    </code>
-                </pre>
-                <p class="project-description">Le projet a été découpé en classes métier (Product/Category), fonctions de scraping, module de téléchargement et API REST.</p>
-            </div>
-        </section>
+        <section class="project-section stage-mission-section" id="mission-automatisation-telechargement">
+            <div class="card project-container stage-mission-card">
+                <h2 class="project-title">Automatisation du téléchargement de fichiers</h2>
 
-        <section class="project-section">
-            <div class="card project-container">
-                <h2 class="project-title">Scraping et structuration des données</h2>
-                <p class="project-description">La logique récupère les catégories, parcourt toutes les pages paginées, évite les doublons produits puis extrait les liens de fiches et images.</p>
-                <pre class="stage-code"><code>for block in product_blocks:
-    product_url = urljoin(SHOP_URL, block['href'])
-    if product_url in seen_products:
-        continue
-    seen_products.add(product_url)</code></pre>
-                <pre class="stage-code"><code>product = Product(product_ref, product_name, product_url,
-                  tech_sheet, safety_sheet, image)
-category.products.append(product)
-DATA.append(category.format_category())</code></pre>
-            </div>
-        </section>
-
-        <section class="project-section">
-            <div class="card project-container">
-                <h2 class="project-title">Téléchargement automatisé des fiches</h2>
-                <p class="project-description">Le script crée un dossier par produit, télécharge les fiches techniques/sécurité, télécharge l'image et génère une archive ZIP.</p>
-                <pre class="stage-code"><code>response = requests.get(url, stream=True)
-response.raise_for_status()
-dest_path.parent.mkdir(parents=True, exist_ok=True)
-for chunk in response.iter_content(chunk_size=8192):
-    f.write(chunk)</code></pre>
-                <pre class="stage-code"><code>zip_path = dir / f"{product.name.upper()}_FICHES.zip"
-with zipfile.ZipFile(zip_path, 'w') as zipf:
-    if tech_path.exists():
-        zipf.write(tech_path, arcname=tech_path.name)</code></pre>
-            </div>
-        </section>
-
-        <section class="project-section">
-            <div class="card project-container">
-                <h2 class="project-title">API Flask pour exploitation interne</h2>
-                <p class="project-description">L'API exposait les données en JSON ou HTML et permettait aussi de filtrer uniquement les références utilisées par l'entreprise.</p>
-                <pre class="stage-code"><code>@app.route('/products/format=&lt;string:format&gt;/', methods=['GET'])
-def get_products(format):
-    if format == "json":
-        return jsonify(formatted_products)</code></pre>
-                <pre class="stage-code"><code>@app.route('/products/myproducts/key=&lt;string:key&gt;/format=&lt;string:format&gt;/')
-def get_my_products_by_key(key, format):
-    my_products = {ref: get_product_by_ref(ref, format, True)
-                   for ref in USED_PRODUCTS_REF}</code></pre>
-            </div>
-        </section>
-
-        <section class="project-section">
-            <div class="card project-container">
-                <h2 class="project-title">Compétences consolidées</h2>
-                <div class="project-features">
+                <div class="mission-subsection mission-objectifs">
+                    <h3>Objectifs</h3>
                     <ul>
-                        <li>Conception de scripts Python orientés production.</li>
-                        <li>Manipulation d'API, JSON, et transformations de données.</li>
-                        <li>Maintenance web sur CMS et code legacy.</li>
-                        <li>Approche orientée automatisation et gain de temps opérationnel.</li>
+                        <li>Fiabiliser la collecte des documents techniques pour réduire le traitement manuel.</li>
+                        <li>Rendre les informations produits plus rapidement accessibles aux équipes.</li>
+                    </ul>
+                </div>
+
+                <div class="mission-subsection mission-outils">
+                    <h3>Outils</h3>
+                    <div class="mission-tools">
+                        <span class="mission-tool">Python</span>
+                        <span class="mission-tool">Web scraping</span>
+                        <span class="mission-tool">API personnalisée</span>
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-taches">
+                    <h3>Tâches réalisées</h3>
+                    <div class="mission-task-list">
+                        <div class="mission-task-item">
+                            <p>Création de scripts Python pour télécharger des fichiers techniques et des fiches de sécurité.</p>
+                            <img src="" alt="Illustration des scripts de téléchargement automatisé">
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Mise en place d'outils de scraping avec filtrage par numéros de référence.</p>
+                            <img src="" alt="Illustration du filtrage des références produits">
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Création d'une API pour la prévisualisation des données extraites.</p>
+                            <img src="" alt="Illustration de l'API de prévisualisation des données">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-apprentissages">
+                    <h3>Ce que j'ai appris</h3>
+                    <ul>
+                        <li>Développement de scripts d'automatisation en Python.</li>
+                        <li>Techniques de web scraping et conception d'API.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section stage-mission-section" id="mission-ux">
+            <div class="card project-container stage-mission-card">
+                <h2 class="project-title">Amélioration de l'expérience utilisateur</h2>
+
+                <div class="mission-subsection mission-objectifs">
+                    <h3>Objectifs</h3>
+                    <ul>
+                        <li>Simplifier la saisie des formulaires pour limiter les erreurs utilisateurs.</li>
+                        <li>Améliorer la qualité des données collectées pour les traitements internes.</li>
+                    </ul>
+                </div>
+
+                <div class="mission-subsection mission-outils">
+                    <h3>Outils</h3>
+                    <div class="mission-tools">
+                        <span class="mission-tool">API Google Place</span>
+                        <span class="mission-tool">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-taches">
+                    <h3>Tâches réalisées</h3>
+                    <div class="mission-task-list">
+                        <div class="mission-task-item">
+                            <p>Intégration de l'API Google Place pour la saisie semi-automatique des adresses.</p>
+                            <img src="" alt="Illustration de l'intégration de l'API Google Place">
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Amélioration de la convivialité des formulaires et de la précision des données.</p>
+                            <img src="" alt="Illustration de l'amélioration de l'expérience utilisateur">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-apprentissages">
+                    <h3>Ce que j'ai appris</h3>
+                    <ul>
+                        <li>Intégration d'API externes.</li>
+                        <li>Conception UX orientée utilisateur.</li>
                     </ul>
                 </div>
             </div>
