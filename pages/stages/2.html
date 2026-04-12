@@ -42,9 +42,31 @@
     <main>
         <h1>Stage 2e année - NEOSIT</h1>
 
+        <section class="project-section stage-intro-section" id="intro-stage-2">
+            <div class="card project-container stage-intro-card">
+                <h2 class="project-title">Introduction du stage</h2>
+                <div class="mission-subsection mission-contexte">
+                    <h3>Cadre</h3>
+                    <p class="project-description">Ce stage de 2e année s'est déroulé chez NEOSIT, à Montigny-le-Bretonneux, du 19 janvier 2026 au 06 mars 2026, dans la continuité du stage de 1re année réalisé dans la même organisation.</p>
+                    <p class="project-description">La mission globale était de fiabiliser les formulaires métiers, sécuriser les documents sensibles et améliorer l'efficacité opérationnelle côté client comme côté administration.</p>
+                </div>
+                <div class="mission-subsection mission-liens">
+                    <h3>Navigation entre stages</h3>
+                    <div class="stage-links">
+                        <a class="stage-link-button" href="1.html">Voir le stage de 1re année</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="project-section stage-mission-section" id="mission-api-formulaires">
             <div class="card project-container stage-mission-card">
                 <h2 class="project-title">Intégration d'API et automatisation de formulaires</h2>
+
+                <div class="mission-subsection mission-contexte">
+                    <h3>Contexte</h3>
+                    <p class="project-description">L'objectif était de réduire les erreurs de saisie des données d'entreprise. L'intégration a d'abord démarré avec l'API SIRENE de l'INSEE, puis a évolué vers l'API Recherche Entreprises pour gagner en stabilité, simplicité d'intégration et qualité des adresses.</p>
+                </div>
 
                 <div class="mission-subsection mission-objectifs">
                     <h3>Objectifs</h3>
@@ -81,6 +103,16 @@
                     </div>
                 </div>
 
+                <div class="mission-subsection mission-details">
+                    <h3>Détails complémentaires</h3>
+                    <ul>
+                        <li>Validation automatique du SIREN sur 9 chiffres avant appel API.</li>
+                        <li>Utilisation d'un proxy PHP pour isoler les appels API et gérer proprement les erreurs.</li>
+                        <li>Ajout de la récupération de l'adresse du siège social en plus de la dénomination.</li>
+                        <li>Migration vers l'API Recherche Entreprises pour éviter les contraintes OAuth et réduire les incohérences de données.</li>
+                    </ul>
+                </div>
+
                 <div class="mission-subsection mission-apprentissages">
                     <h3>Ce que j'ai appris</h3>
                     <ul>
@@ -95,6 +127,11 @@
         <section class="project-section stage-mission-section" id="mission-pdf-formulaires">
             <div class="card project-container stage-mission-card">
                 <h2 class="project-title">Génération de documents PDF depuis les formulaires</h2>
+
+                <div class="mission-subsection mission-contexte">
+                    <h3>Contexte</h3>
+                    <p class="project-description">Les équipes avaient besoin d'un récapitulatif PDF professionnel envoyé après soumission, lisible par le client et directement exploitable par l'administration.</p>
+                </div>
 
                 <div class="mission-subsection mission-objectifs">
                     <h3>Objectifs</h3>
@@ -137,6 +174,15 @@
                     </div>
                 </div>
 
+                <div class="mission-subsection mission-details">
+                    <h3>Détails complémentaires</h3>
+                    <ul>
+                        <li>Création d'un template HTML pensé pour un rendu propre à l'impression A4.</li>
+                        <li>Structuration des blocs PDF par sections métier: entreprise, facturation et consignes d'accès.</li>
+                        <li>Correction du format de date en remplaçant un placeholder non fiable par un champ formulaire dédié.</li>
+                    </ul>
+                </div>
+
                 <div class="mission-subsection mission-apprentissages">
                     <h3>Ce que j'ai appris</h3>
                     <ul>
@@ -151,6 +197,11 @@
         <section class="project-section stage-mission-section" id="mission-signature">
             <div class="card project-container stage-mission-card">
                 <h2 class="project-title">Ajout d'un pad de signature électronique</h2>
+
+                <div class="mission-subsection mission-contexte">
+                    <h3>Contexte</h3>
+                    <p class="project-description">Le plugin de signature RSForm n'était pas installé et demandait une licence additionnelle. Une solution sur mesure a été développée avec SignaturePad pour garder la maîtrise technique et éviter une dépendance externe.</p>
+                </div>
 
                 <div class="mission-subsection mission-objectifs">
                     <h3>Objectifs</h3>
@@ -189,6 +240,15 @@
                     </div>
                 </div>
 
+                <div class="mission-subsection mission-details">
+                    <h3>Détails complémentaires</h3>
+                    <ul>
+                        <li>Capture de signature via canvas HTML5 avec redimensionnement responsive.</li>
+                        <li>Validation bloquante côté interface si la signature est absente avant soumission.</li>
+                        <li>Encodage en base64 stocké dans un champ caché puis injecté dans le PDF.</li>
+                    </ul>
+                </div>
+
                 <div class="mission-subsection mission-apprentissages">
                     <h3>Ce que j'ai appris</h3>
                     <ul>
@@ -203,6 +263,11 @@
         <section class="project-section stage-mission-section" id="mission-seo-visibilite">
             <div class="card project-container stage-mission-card">
                 <h2 class="project-title">Amélioration du référencement et de la visibilité en ligne</h2>
+
+                <div class="mission-subsection mission-contexte">
+                    <h3>Contexte</h3>
+                    <p class="project-description">Le site devait maintenir sa visibilité dans un environnement concurrentiel, avec une logique d'amélioration continue du contenu et du suivi des performances.</p>
+                </div>
 
                 <div class="mission-subsection mission-objectifs">
                     <h3>Objectifs</h3>
@@ -259,6 +324,11 @@
             <div class="card project-container stage-mission-card">
                 <h2 class="project-title">Cybersécurité</h2>
 
+                <div class="mission-subsection mission-contexte">
+                    <h3>Contexte</h3>
+                    <p class="project-description">Des documents sensibles (CV, lettres de motivation, RIB) étaient téléversés via les formulaires. Le défi était de supprimer l'accès public direct sans casser les traitements Joomla/RSForm.</p>
+                </div>
+
                 <div class="mission-subsection mission-objectifs">
                     <h3>Objectifs</h3>
                     <ul>
@@ -294,6 +364,15 @@
                     </div>
                 </div>
 
+                <div class="mission-subsection mission-details">
+                    <h3>Détails complémentaires</h3>
+                    <ul>
+                        <li>Application de la permission Linux 750 sur le dossier d'uploads pour bloquer l'accès internet direct.</li>
+                        <li>Maintien du fonctionnement applicatif: upload et lecture restent possibles pour l'application.</li>
+                        <li>Renforcement de la traçabilité et réduction des risques de fuite documentaire.</li>
+                    </ul>
+                </div>
+
                 <div class="mission-subsection mission-apprentissages">
                     <h3>Ce que j'ai appris</h3>
                     <ul>
@@ -308,6 +387,11 @@
         <section class="project-section stage-mission-section" id="mission-champs-repetables">
             <div class="card project-container stage-mission-card">
                 <h2 class="project-title">Modification d'un formulaire avec champs répétables</h2>
+
+                <div class="mission-subsection mission-contexte">
+                    <h3>Contexte</h3>
+                    <p class="project-description">Le formulaire devait gérer des cas métier variés: sections répétables selon les étages, homogénéisation de certains champs et contrôles plus stricts entre fréquence d'intervention et jours cochés.</p>
+                </div>
 
                 <div class="mission-subsection mission-objectifs">
                     <h3>Objectifs</h3>
@@ -346,6 +430,15 @@
                             <img src="" alt="Illustration de l'intégration conditionnelle des champs répétables dans le PDF">
                         </div>
                     </div>
+                </div>
+
+                <div class="mission-subsection mission-details">
+                    <h3>Détails complémentaires</h3>
+                    <ul>
+                        <li>Scripts Python utilisés pour transformer en masse des champs RSForm XML et gagner du temps sur des dizaines de composants.</li>
+                        <li>Passage de champs texte vers des choix structurés pour améliorer l'homogénéité des réponses.</li>
+                        <li>Mise en place d'une validation dynamique fréquence/jours avec blocage de soumission en cas d'incohérence.</li>
+                    </ul>
                 </div>
 
                 <div class="mission-subsection mission-apprentissages">
