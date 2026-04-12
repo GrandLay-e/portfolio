@@ -86,6 +86,63 @@ Joomla, Python, PHP, HTML, CSS, JavaScript, Google Search Console, SemRush, base
     #### Illustration
     Ajouter des images
 
+    ### Mise en place d'un système de génération de documents PDF à partir des informations saisies dans les formulaires
+
+    #### Objectifs
+    - Automatiser la création de documents PDF pour les clients à partir des données saisies dans les formulaires
+
+    - Garantir la précision et la cohérence des informations dans les documents générés
+
+    - Garder la traçabilité des documents générés pour un suivi efficace
+
+    #### Outils
+    - PHP, base64, bibliothèques de génération de PDF (ex: TCPDF, Avec le plugin PDF de RSform), HTML, CSS. 
+
+    #### Tâches réalisées
+    - S'assurer de l'installation du plugin PDF de RSform pour permettre la génération de documents PDF à partir des formulaires et ce par l'envoi d'un mail au concepteur du site web et detenteur de la licence RSFORM
+
+    - Configuration du plugin pour générer des PDF personnalisés en fonction des données saisies dans les formulaires
+
+    - Ecriture du script html et css qui donneront le format et la structure du document PDF généré
+
+    - Ajout du logo de l'entreprise et d'autres éléments graphiques par leur encodage en base64 pour garantir une intégration fluide dans les documents PDF
+
+    #### Ce que j'ai appris
+    - Utilisation de bibliothèques de génération de PDF en PHP
+    - Encodage d'images en base64 pour une intégration dans les documents
+    - Automatisation de la création de documents à partir de données saisies dans les formulaires
+
+    #### Illustration
+    Ajouter des images
+
+    ### Ajout de pad de signature électronique dans le formulaire de recueil d'informations du site client. 
+
+    #### Objectifs
+    - Permettre aux clients de signer électroniquement les documents générés à partir des formulaires du site web
+
+    - Garantir la validité juridique des signatures électroniques
+
+    - Intégrer la signature électronique de manière transparente dans le processus de génération de documents PDF par sa conversion en base64 et son intégration dans le document PDF généré
+
+    #### Outils
+    - HTML, CSS, JavaScript, PHP, base64
+
+    #### Tâches réalisées
+    - Intégration d'un pad de signature électronique dans les formulaires du site web pour permettre aux clients de signer électroniquement les documents générés
+
+    - Conversion de la signature électronique en base64 pour son intégration dans les documents PDF générés
+
+    - Configuration du processus de génération de documents PDF pour inclure la signature électronique dans les documents générés
+
+    #### Ce que j'ai appris
+    - Intégration de fonctionnalités de signature électronique dans les formulaires web
+
+    - Encodage de données de signature en base64 pour une intégration dans les documents PDF
+
+    - Automatisation de la création de documents PDF avec signature électronique intégrée
+    #### Illustration
+    Ajouter des images
+
     ### Amélioration du référencement et de la visibilité en ligne
 
     #### Objectifs
@@ -111,7 +168,59 @@ Joomla, Python, PHP, HTML, CSS, JavaScript, Google Search Console, SemRush, base
     #### Illustration
     Ajouter des images
 
+    ### Cybersécurité
+    #### Objectifs
+    - Renforcer la sécurité du site web et protéger les données téléchargées en bloquant les accès non autorisés depuis internet
+
+    - Garantir l'intégrité et la confidentialité de ces données
+
+    #### Outils
+    - FileZilla
+    - Configuration de pare-feu et de règles d'accès
+
+    #### Tâches réalisées
+    - Configuration de FileZilla pour restreindre les accès FTP aux dossiers contenant les documents téléchargés par d'autres personnes à travers les formulaires : CV, Lettres de motivation, RIB.
     
+    - Changement des permissions d'accès de 755 à 750
+
+    - Assurer un nomenclature claire, et unique pour tout fichier téléchargé afin d'éviter les conflits, les erreurs de traitement, et aussi l'écrasement de fichiers existants. 
+
+    #### Ce que j'ai appris
+    - Configuration de FileZilla pour renforcer la sécurité des données
+    - Gestion des permissions d'accès pour protéger les données sensibles
+    - Importance de la nomenclature des fichiers pour éviter les conflits et les erreurs de traitement
+    #### Illustration
+    Ajouter des images
+
+    ### Modification d'un formulaire qui recuil des informations complémentaires pour répéter un nombre de champs de saisie
+
+    #### Objectif
+    - Permettre aux clients de saisir des informations complémentaires en fonction des étages qu'occupe leur entreprise dans un bâtiment, en répétant un nombre de champs de saisie pour chaque étage
+
+    - Garantir la flexibilité et la convivialité du formulaire pour les utilisateurs
+
+    - Assurer la cohérence et la précision des données saisies dans le formulaire
+
+    - Intégrer cette fonctionnalité de manière transparente dans le processus de génération de documents PDF
+
+    #### Outils
+    - HTML, CSS, JavaScript, PHP, base64, Joomla, Python
+
+    #### Tâches réalisées
+    - Modification du formulaire de recueil d'informations pour permettre la répétition d'un nombre de champs de saisie en fonction du nombre d'étages occupés par l'entreprise dans un bâtiment
+
+    - Utilisation de python pour gèrer la logique de répétition des champs de saisie en fonction du nombre d'étages saisis par l'utilisateur depuis le code xml du formulaire de base. 
+
+    - Configuration du processus de génération de documents PDF pour inclure les informations supplémentaires saisies dans les champs répétés, et des conditons pour que les champs répétés soient intégrés dans le document PDF généré uniquement s'ils sont remplis par l'utilisateur.
+
+    #### Ce que j'ai appris
+    - Modification de formulaires web pour permettre la répétition de champs de saisie en fonction
+    - Utilisation de Python pour gérer la logique de répétition des champs de saisie
+    - Automatisation de la création de documents PDF avec des données conditionnelles basées sur les champs répétés
+    #### Illustration
+    Ajouter des images
+
+
 
 
 
