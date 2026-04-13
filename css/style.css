@@ -539,10 +539,10 @@ li{
 }
 
 .project-container {
-    margin: 0;
+    margin-bottom: 1em;
     position: relative;
     background: linear-gradient(135deg, #2d3a5a 0%, #232b45 100%);
-    border-radius: var(--border-radius);
+    border-radius: 1em;
     padding: 32px;
     box-shadow: 0 8px 32px rgba(30, 40, 60, 0.4);
     transition: all var(--transition);
@@ -1072,7 +1072,7 @@ main > h1 {
     .project-container {
         flex: 1 1 calc(50% - 10px);
         min-width: 300px;
-        margin: 0;
+        /* margin-bottom: 1em; */
         padding: 20px;
     }
 }
@@ -1094,7 +1094,7 @@ main > h1 {
         flex: 1 1 100%;
         min-width: 0;
         width: 100%;
-        margin: 0;
+        /* margin: 0; */
         border-radius: 0;
         border-left-width: 4px;
     }
