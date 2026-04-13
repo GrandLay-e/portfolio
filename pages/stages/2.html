@@ -19,9 +19,16 @@
     <meta name="author" content="Abdallah Sow">
     <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/193377484?v=4">
     <style>
-        .stage-gallery { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
-        .stage-gallery img { flex: 1 1 320px; max-width: 48%; min-width: 260px; width: 100%; height: auto; border-radius: 10px; object-fit: cover; }
-        .stage-code { background: #111827; color: #f8fafc; padding: 12px; border-radius: 10px; overflow-x: auto; font-size: 0.92rem; }
+        img { flex: 1 1 320px; max-width: 48%; min-width: 260px; width: 100%; height: auto; border-radius: 10px; object-fit: cover; }
+        #api-formulaires-images{
+            display: grid;
+            grid-template-columns: 0.9fr 1fr;
+            gap: 2em;
+            margin: 2em;
+        }
+        #api-formulaires-images > :nth-child(3) {
+            grid-column: 1 / -1;
+        }
     </style>
 </head>
 <body>
@@ -118,6 +125,15 @@
                     </div>
                 </div>
 
+                <div class="mission-subsection mission-illustrations">
+                    <h3>Illustrations</h3>
+                    <div class="mission-images" id="api-formulaires-images">
+                        <img src="../../images/stages/2/code php appel api siren.png" alt="Code PHP pour l'appel à l'API Siren">
+                        <img src="../../images/stages/2/code js fetch proxy php.png" alt="Code JavaScript pour le fetch vers le proxy PHP">
+                        <img src="../../images/stages/2/exemple appel api siren.png" alt="Test de saisie d'un SIREN dans le formulaire avec pré-remplissage des données via l'API">
+                    </div>
+                </div>
+
                 <div class="mission-subsection mission-apprentissages">
                     <h3>Ce que j'ai appris</h3>
                     <ul>
@@ -185,6 +201,12 @@
                     </div>
                 </div>
 
+                <div class="mission-subsection mission-illustrations">
+                    <h3>Illustrations</h3>
+                    <div class="mission-images" id="pdf-formulaires-images">
+
+                    </div>
+                </div>
                 <div class="mission-subsection mission-apprentissages">
                     <h3>Ce que j'ai appris</h3>
                     <ul>
@@ -251,6 +273,12 @@
                         <div class="mission-task-item">
                             <p>Injection dynamique dans les documents générés.</p>
                         </div>
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-illustrations">
+                    <h3>Illustrations</h3>
+                    <div class="mission-images" id="signature-images">
                     </div>
                 </div>
 
@@ -321,6 +349,11 @@
                     </div>
                 </div>
 
+                <div class="mission-subsection mission-illustrations">
+                    <h3>Illustrations</h3>
+                    <div class="mission-images" id="seo-visibilite-images">
+                    </div>
+                </div>
                 <div class="mission-subsection mission-apprentissages">
                     <h3>Ce que j'ai appris</h3>
                     <ul>
@@ -382,6 +415,12 @@
                     </div>
                 </div>
 
+                <div class="mission-subsection mission-illustrations">
+                    <h3>Illustrations</h3>
+                    <div class="mission-images" id="cybersecurite-images">
+
+                    </div>
+                </div>
                 <div class="mission-subsection mission-apprentissages">
                     <h3>Ce que j'ai appris</h3>
                     <ul>
@@ -446,7 +485,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="mission-subsection mission-illustrations">
+                    <h3>Illustrations</h3>
+                    <div class="mission-images" id="champs-repetables-images">
 
+                    </div>
+                </div>
                 <div class="mission-subsection mission-apprentissages">
                     <h3>Ce que j'ai appris</h3>
                     <ul>
