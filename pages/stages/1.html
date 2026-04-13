@@ -20,18 +20,21 @@
     <meta name="author" content="Abdallah Sow">
     <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/193377484?v=4">
     <style>
-        .stage-gallery { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
-        .stage-gallery img { flex: 1 1 320px; max-width: 48%; min-width: 260px; width: 100%; height: auto; border-radius: 10px; object-fit: cover; }
+        img { flex: 1 1 320px; max-width: 48%; min-width: 260px; width: 100%; height: auto; border-radius: 10px; object-fit: cover; }
         .stage-code { background: #111827; color: #f8fafc; padding: 12px; border-radius: 10px; overflow-x: auto; font-size: 0.92rem; }
         /* Images de référencement */
         #referencement-images{
             display: grid;
-            grid-template-columns: 1fr 3fr;
-            gap: 16px;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 2em;
         }
-        #referencement-images > :nth-child(3) {
-            grid-column: span 2;
+        #automatisation-images {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr 0.9fr;
+            gap: 2em;
         }
+
+
     </style>
 </head>
 <body>
@@ -111,8 +114,7 @@
                 <div class="mission-subsection mission-illustrations">
                     <div class="mission-images" id="referencement-images">
                         <img src="../../images/stages/1/google search console.png" alt="Tablea deau de bord Google Search Console montrant les performances du site">
-                        <img src="../../images/stages/1/test adresse dynamique.png" alt="Test de saisie d'adresse dynamique avec API Google Place dans un formulaire">
-                        <img src="../../images/stages/1/code adresse dynamique.png" alt="code JavaScript de formattage d'adresse dynamique avec API Google Place">
+                        <img src="../../images/stages/1/code sitemap.png" alt="Code de génération de sitemap pour améliorer le référencement">
                     </div>
                 </div>
 
@@ -160,11 +162,17 @@
                         </div>
                         <div class="mission-task-item">
                             <p>Création d'une API pour la prévisualisation des données extraites.</p>
-                            
                         </div>
                     </div>
                 </div>
 
+                <div class="mission-subsection mission-illustrations" id="automatisation-illustrations">
+                    <div class="mission-images" id="automatisation-images">
+                        <img src="../../images/stages/1/code class product.png" alt="Extrait de code Python d'une classe Product pour structurer les données extraites des fichiers techniques">
+                        <img src="../../images/stages/1/code download eyrein.png" alt="Extrait de code Python pour le téléchargement automatisé de fichiers techniques">
+                        <img src="../../images/stages/1/dossier download eyrein.png" alt="Dossier local contenant les fichiers techniques téléchargés automatiquement avec le script Python">
+                    </div>
+                </div>
                 <div class="mission-subsection mission-apprentissages">
                     <h3>Ce que j'ai appris</h3>
                     <ul>
@@ -206,6 +214,13 @@
                             <p>Amélioration de la convivialité des formulaires et de la précision des données.</p>
                             
                         </div>
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-illustrations">
+                    <div class="mission-images" id="adress-images" style="margin: 3em;">
+                        <img src="../../images/stages/1/code adresse dynamique.png" alt="">
+                        <img src="../../images/stages/1/test adresse dynamique.png" alt="Test de saisie d'adresse dynamique avec API Google Place dans un formulaire">
                     </div>
                 </div>
 
