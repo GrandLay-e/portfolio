@@ -12,6 +12,7 @@
 }
 html{
     background-color: var(--secondary-bg);
+    overflow-x: clip;
 }
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -19,6 +20,7 @@ body {
     color: var(--text-main);
     margin: 0;
     padding: 0;
+    overflow-x: clip;
 }
 
 h1 {
@@ -803,6 +805,22 @@ li{
     color: #111827;
 }
 
+.mission-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    align-items: start;
+}
+
+.mission-images img {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
 /* Styles des images dans les projets */
 .project-container img {
     max-width: 100%;
@@ -973,12 +991,74 @@ main > h1 {
 
 /* Responsive */
 @media (max-width: 900px) {
+    body {
+        font-size: 16px;
+        overflow-x: hidden;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 16px;
+        right: 16px;
+        bottom: auto;
+        z-index: 1200;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: min(88vw, 320px);
+        height: 100dvh;
+        padding: 88px 16px 24px;
+        justify-content: flex-start;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1100;
+        border-bottom: none;
+    }
+
+    nav.active {
+        transform: translateX(0);
+    }
+
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav ul li {
+        width: 100%;
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+
+    nav ul li a {
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        gap: 12px;
+        padding: 12px 14px;
+        min-width: unset;
+        border: 1px solid rgba(252, 163, 17, 0.2);
+        background: rgba(255, 255, 255, 0.02);
+    }
+
+    nav ul li a .material-symbols-outlined {
+        margin-bottom: 0;
+    }
+
     .education-section,
     .certifications,
     .competences {
         max-width: 98vw;
         padding: 12px;
     }
+
     .project-section {
         display: flex;
         flex-direction: row;
@@ -995,101 +1075,58 @@ main > h1 {
         margin: 0;
         padding: 20px;
     }
-        justify-content: center;
-        gap: 24px;
-    }
 }
 
 @media (max-width: 768px) {
-    body {
-        font-size: 16px;
-        overflow-x: hidden;
-    }
-
-    .menu-toggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    nav {
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 280px;
-        flex-direction: column;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-        padding: 20px;
-        z-index: 999;
-    }
-
-    nav.active {
-        transform: translateX(0);
-        background-color: var(--accent-bg);
+    h1 {
+        font-size: 2em;
+        margin-top: 18px;
     }
 
     .project-section {
-        display: flex;
         flex-direction: column;
-        gap: 20px;
-        max-width: 100%;
-        margin: 20px;
+        margin: 0;
         padding: 0;
+        max-width: 100%;
     }
 
     .project-container {
         flex: 1 1 100%;
+        min-width: 0;
+        width: 100%;
         margin: 0;
-        padding: 20px;
+        border-radius: 0;
+        border-left-width: 4px;
     }
 
     .mission-subsection {
         padding: 12px;
     }
 
+    .stage-mission-card,
+    .stage-intro-card {
+        padding: 20px 16px;
+    }
+
+    .mission-subsection ul li,
+    .mission-task-item {
+        padding: 10px;
+    }
+
     .mission-task-item img {
         min-height: 150px;
+        max-height: 260px;
     }
 
     .experiences-timeline::before {
         left: 20px;
     }
 
-    nav ul {
-        width: 100%;
-        height: 100%;
-        flex-direction:column;
-        gap: 32px;
-        margin-top: 60px;
-        li{
-            padding: 12px 0;
-        }
-    }
-
-    nav ul li a {
-        padding: 24px;
-        border-bottom: 1px solid var(--primary-bg);
+    .certifications .certif ul {
         display: flex;
-        flex-direction: row;
-        font-size: 2em;
-        color: var(--primary-bg);
-
-        span{
-            margin-left: 10px;
-            align-items: center;
-            justify-self: unset;
-        }
-    } 
-    h1 {
-        font-size: 2em;
-        margin-top: 18px;
-    }
-    .education-section,
-    .certifications,
-    .competences {
-        padding: 8px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -1097,34 +1134,100 @@ main > h1 {
     body {
         font-size: 14px;
         padding: 0;
-        overflow-x: hidden;
     }
-    nav ul {
-        gap: 8px;
+
+    main,
+    section,
+    .card,
+    .mission-images,
+    .mission-images img,
+    .mission-task-item,
+    .mission-subsection {
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 5px;
     }
+
+    .menu-toggle {
+        top: 12px;
+        right: 12px;
+        width: 52px;
+        height: 52px;
+    }
+
+    nav {
+        width: min(92vw, 320px);
+        padding: 80px 12px 16px;
+    }
+
     nav ul li a {
-        font-size: 2em;
-        padding: 6px 10px;
+        padding: 10px 12px;
     }
+
+    nav ul li a .material-symbols-outlined {
+        font-size: 20px;
+    }
+
+    nav ul li a .nav-text {
+        font-size: 0.9em;
+    }
+
     h1 {
         font-size: 1.4em;
         margin-top: 8px;
         letter-spacing: 0.03em;
         padding: 0 4px;
     }
+
     main > h1 {
         font-size: 1.8em;
     }
+
     .back-to-top {
         bottom: 12px;
         right: 12px;
         padding: 8px;
     }
+
     .project-container {
-        padding: 16px;
-        margin: 0 12px;
+        width: 100%;
+        padding: 14px 12px;
+        margin-bottom: 2em;
         border-left-width: 4px;
+        border-radius: 1em;
     }
+
+    .stage-mission-card,
+    .stage-intro-card {
+        padding: 14px 12px;
+    }
+    .stage-index-main{
+        padding: 0;
+    }
+    .mission-subsection {
+        margin: 12px 0;
+        padding: 10px;
+    }
+
+    .mission-subsection h3 {
+        font-size: 1em;
+        margin-bottom: 8px;
+    }
+
+    .mission-subsection ul {
+        gap: 8px;
+    }
+
+    .mission-subsection ul li,
+    .mission-task-item {
+        padding: 9px;
+    }
+
+    .mission-images {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
     .project-title {
         font-size: 1.3em;
     }
@@ -1141,30 +1244,15 @@ main > h1 {
         font-size: 0.8em;
         padding: 6px 10px;
     }
-}
 
-/* Styles responsive pour la navigation avec icônes */
+    .link-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
 
-/* Tablettes (max-width: 768px) */
-@media (max-width: 768px) {
-    nav ul {
-        gap: 20px;
-    }
-    
-    nav ul li a {
-        padding: 10px 16px;
-        min-width: 70px;
-        gap: 4px;
-    }
-    
-    nav ul li a .material-symbols-outlined {
-        font-size: 22px;
-    }
-    
-    nav ul li a .nav-text {
-        font-size: 0.85em;
-    }
-    .certifications .certif ul{
+    .certifications .certif ul {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1172,65 +1260,17 @@ main > h1 {
     }
 }
 
-/* Mobiles (max-width: 480px) */
-@media (max-width: 480px) {
-    nav {
-        padding: 12px 0;
-    }
-    
-    nav ul {
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    nav ul li a {
-        padding: 8px 12px;
-        min-width: 60px;
-        gap: 3px;
-        border-radius: 8px;
-    }
-    
-    nav ul li a .material-symbols-outlined {
-        font-size: 20px;
-    }
-    
-    nav ul li a .nav-text {
-        font-size: 0.8em;
-        font-weight: 400;
-    }
-    .link-cards{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-    }
-    .certifications .certif ul{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-/* Très petits écrans (max-width: 320px) */
 @media (max-width: 320px) {
-    nav ul {
-        gap: 8px;
-    }
-    
     nav ul li a {
-        padding: 6px 10px;
-        min-width: 50px;
-        gap: 2px;
+        padding: 8px 10px;
     }
-    
+
     nav ul li a .material-symbols-outlined {
         font-size: 18px;
     }
-    
+
     nav ul li a .nav-text {
-        font-size: 0.75em;
+        font-size: 0.8em;
     }
 }
 

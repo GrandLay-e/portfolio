@@ -19,7 +19,7 @@
     <meta name="author" content="Abdallah Sow">
     <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/193377484?v=4">
     <style>
-        img { flex: 1 1 320px; max-width: 48%; min-width: 260px; width: 100%; height: auto; border-radius: 10px; object-fit: cover; }
+        .mission-images img { flex: 1 1 320px; max-width: 100%; min-width: 0; width: 100%; height: auto; border-radius: 10px; object-fit: cover; }
         #api-formulaires-images{
             display: grid;
             grid-template-columns: 0.9fr 1fr;
@@ -28,6 +28,18 @@
         }
         #api-formulaires-images > :nth-child(3) {
             grid-column: 1 / -1;
+        }
+
+        @media (max-width: 900px) {
+            #api-formulaires-images {
+                grid-template-columns: 1fr;
+                gap: 1em;
+                margin: 1em 0;
+            }
+
+            #api-formulaires-images > :nth-child(3) {
+                grid-column: auto;
+            }
         }
     </style>
 </head>

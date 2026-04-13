@@ -4,40 +4,77 @@ document.addEventListener('DOMContentLoaded', function() {
     const nav = document.querySelector('nav');
     let isMenuOpen = false;
 
+    if (menuToggle && nav) {
+        menuToggle.setAttribute('aria-expanded', 'false');
+    }
+
     // Fonction pour fermer le menu
     function closeMenu() {
+        if (!nav || !menuToggle) {
+            return;
+        }
         nav.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
         isMenuOpen = false;
     }
 
+    function openMenu() {
+        if (!nav || !menuToggle) {
+            return;
+        }
+        nav.classList.add('active');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+        isMenuOpen = true;
+    }
+
     // Gestionnaire de clic pour le bouton menu
-    menuToggle.addEventListener('click', function(e) {
-        e.stopPropagation();
-        nav.classList.toggle('active');
-        isMenuOpen = !isMenuOpen;
-    });
+    if (menuToggle && nav) {
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (isMenuOpen) {
+                closeMenu();
+                return;
+            }
+            openMenu();
+        });
+    }
 
     // Fermer le menu si on clique en dehors
     document.addEventListener('click', function(e) {
-        if (isMenuOpen && !nav.contains(e.target) && e.target !== menuToggle) {
+        if (!menuToggle || !nav) {
+            return;
+        }
+        if (isMenuOpen && !nav.contains(e.target) && !menuToggle.contains(e.target)) {
             closeMenu();
         }
     });
 
     // Fermer le menu après avoir cliqué sur un lien
-    nav.addEventListener('click', function(e) {
-        if (e.target.tagName === 'A') {
+    if (nav) {
+        nav.addEventListener('click', function(e) {
+            const link = e.target.closest('a');
+            if (link) {
+                closeMenu();
+            }
+        });
+    }
+
+    // Fermer le menu avec la touche Echap
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && isMenuOpen) {
             closeMenu();
         }
     });
 
     // Gestion de l'affichage du menu en fonction de la largeur de l'écran
     window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
-            nav.classList.remove('active');
-            isMenuOpen = false;
+        if (window.innerWidth > 900) {
+            closeMenu();
         }
     });
+
     const backToTopButton = document.querySelector('.back-to-top');
     
     if (backToTopButton) {
