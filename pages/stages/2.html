@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-887RENWPTQ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-887RENWPTQ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="../../js/main.js" defer></script>
+    <title>Stage 2e année - NEOSIT</title>
+    <meta name="description" content="Détails du stage de deuxième année: API, formulaires, PDF, signature, sécurité et automatisations.">
+    <meta name="author" content="Abdallah Sow">
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/193377484?v=4">
+    <style>
+        img { flex: 1 1 320px; max-width: 48%; min-width: 260px; width: 100%; height: auto; border-radius: 10px; object-fit: cover; }
+        #api-formulaires-images{
+            display: grid;
+            grid-template-columns: 0.9fr 1fr;
+            gap: 2em;
+            margin: 2em;
+        }
+        #api-formulaires-images > :nth-child(3) {
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-toggle" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1a2236"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+    </button>
+    <nav>
+        <ul>
+            <li><a href="../../index.html"><span class="material-symbols-outlined">home</span><span class="nav-text">Accueil</span></a></li>
+            <li><a href="../parcours.html"><span class="material-symbols-outlined">school</span><span class="nav-text">Formation</span></a></li>
+            <li><a href="index.html"><span class="material-symbols-outlined">work</span><span class="nav-text">Expériences</span></a></li>
+            <li><a href="../competences.html"><span class="material-symbols-outlined">psychology</span><span class="nav-text">Compétences</span></a></li>
+            <li><a href="../projets.html"><span class="material-symbols-outlined">code</span><span class="nav-text">Projets</span></a></li>
+            <li><a href="../veille.html"><span class="material-symbols-outlined">travel_explore</span><span class="nav-text">Veille</span></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Stage 2e année - NEOSIT</h1>
+
+        <section class="project-section stage-intro-section" id="intro-stage-2">
+            <div class="card project-container stage-intro-card">
+                <h2 class="project-title">Introduction du stage</h2>
+                <div class="mission-subsection mission-contexte">
+                    <h3>Cadre</h3>
+                    <p class="project-description">Ce stage de 2e année s'est déroulé chez NEOSIT, à Montigny-le-Bretonneux, du 19 janvier 2026 au 06 mars 2026, dans la continuité du stage de 1re année réalisé dans la même organisation.</p>
+                    <p class="project-description">La mission globale était de fiabiliser les formulaires métiers, sécuriser les documents sensibles et améliorer l'efficacité opérationnelle côté client comme côté administration.</p>
+                </div>
+                <div class="mission-subsection mission-liens">
+                    <h3>Navigation entre stages</h3>
+                    <div class="stage-links">
+                        <a class="stage-link-button" href="1.html">Voir le stage de 1re année</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section stage-mission-section" id="mission-api-formulaires">
+            <div class="card project-container stage-mission-card">
+                <h2 class="project-title">Intégration d'API et automatisation de formulaires</h2>
+
+                <div class="mission-subsection mission-contexte">
+                    <h3>Contexte</h3>
+                    <p class="project-description">L'objectif était de réduire les erreurs de saisie des données d'entreprise. L'intégration a d'abord démarré avec l'API SIRENE de l'INSEE, puis a évolué vers l'API Recherche Entreprises pour gagner en stabilité, simplicité d'intégration et qualité des adresses.</p>
+                </div>
+
+                <div class="mission-subsection mission-objectifs">
+                    <h3>Objectifs</h3>
+                    <ul>
+                        <li>Accélérer le traitement des demandes B2B en réduisant les saisies manuelles.</li>
+                        <li>Standardiser les données clients pour fiabiliser les processus métier.</li>
+                    </ul>
+                </div>
+
+                <div class="mission-subsection mission-outils">
+                    <h3>Outils</h3>
+                    <div class="mission-tools">
+                        <span class="mission-tool">PHP</span>
+                        <span class="mission-tool">JavaScript</span>
+                        <span class="mission-tool">API Siren (recherche entreprise)</span>
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-taches">
+                    <h3>Tâches réalisées</h3>
+                    <div class="mission-task-list">
+                        <div class="mission-task-item">
+                            <p>Intégration de l'API Siren pour pré-remplir les formulaires avec les données d'entreprise.</p>
+                            
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Amélioration de l'expérience utilisateur et réduction des erreurs de saisie.</p>
+                            
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Automatisation de la validation et du traitement des données des formulaires.</p>
+                            
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Validation automatique du SIREN sur 9 chiffres avant appel API.</p>
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Utilisation d'un proxy PHP pour isoler les appels API et gérer proprement les erreurs.</p>
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Ajout de la récupération de l'adresse du siège social en plus de la dénomination.</p>
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Migration vers l'API Recherche Entreprises pour éviter les contraintes OAuth et réduire les incohérences de données.</p>
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Ajout d'un code regex pour valider le format des adresses saisies.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-illustrations">
+                    <h3>Illustrations</h3>
+                    <div class="mission-images" id="api-formulaires-images">
+                        <img src="../../images/stages/2/code php appel api siren.png" alt="Code PHP pour l'appel à l'API Siren">
+                        <img src="../../images/stages/2/code js fetch proxy php.png" alt="Code JavaScript pour le fetch vers le proxy PHP">
+                        <img src="../../images/stages/2/exemple appel api siren.png" alt="Test de saisie d'un SIREN dans le formulaire avec pré-remplissage des données via l'API">
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-apprentissages">
+                    <h3>Ce que j'ai appris</h3>
+                    <ul>
+                        <li>Intégration d'API pour enrichir les fonctionnalités.</li>
+                        <li>Automatisation avancée des processus métier.</li>
+                        <li>Gestion des erreurs et migration vers des solutions plus stables.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section stage-mission-section" id="mission-pdf-formulaires">
+            <div class="card project-container stage-mission-card">
+                <h2 class="project-title">Génération de documents PDF depuis les formulaires</h2>
+
+                <div class="mission-subsection mission-contexte">
+                    <h3>Contexte</h3>
+                    <p class="project-description">Les équipes avaient besoin d'un récapitulatif PDF professionnel envoyé après soumission, lisible par le client et directement exploitable par l'administration.</p>
+                </div>
+
+                <div class="mission-subsection mission-objectifs">
+                    <h3>Objectifs</h3>
+                    <ul>
+                        <li>Produire des documents clients homogènes et exploitables sans reprise manuelle.</li>
+                        <li>Assurer la traçabilité des documents émis pour le suivi opérationnel.</li>
+                    </ul>
+                </div>
+
+                <div class="mission-subsection mission-outils">
+                    <h3>Outils</h3>
+                    <div class="mission-tools">
+                        <span class="mission-tool">PHP</span>
+                        <span class="mission-tool">base64</span>
+                        <span class="mission-tool">Plugin PDF de RSForm</span>
+                        <span class="mission-tool">HTML</span>
+                        <span class="mission-tool">CSS</span>
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-taches">
+                    <h3>Tâches réalisées</h3>
+                    <div class="mission-task-list">
+                        <div class="mission-task-item">
+                            <p>Vérification de l'installation du plugin PDF de RSForm via coordination avec le détenteur de la licence.</p>
+                            
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Configuration du plugin pour générer des PDF personnalisés selon les données des formulaires.</p>
+                            
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Écriture des modèles HTML/CSS pour définir la structure du document PDF.</p>
+                            
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Ajout du logo et d'éléments graphiques via encodage base64 pour garantir leur intégration.</p>
+                            
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Création d'un template HTML pensé pour un rendu propre à l'impression A4.</p>
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Correction du format de date en remplaçant un placeholder non fiable par un champ formulaire dédié.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-illustrations">
+                    <h3>Illustrations</h3>
+                    <div class="mission-images" id="pdf-formulaires-images">
+
+                    </div>
+                </div>
+                <div class="mission-subsection mission-apprentissages">
+                    <h3>Ce que j'ai appris</h3>
+                    <ul>
+                        <li>Utilisation d'outils de génération de PDF en PHP.</li>
+                        <li>Encodage d'images en base64 pour l'intégration documentaire.</li>
+                        <li>Automatisation de la création de documents à partir des formulaires.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section stage-mission-section" id="mission-signature">
+            <div class="card project-container stage-mission-card">
+                <h2 class="project-title">Ajout d'un pad de signature manuscrite numérique</h2>
+
+                <div class="mission-subsection mission-contexte">
+                    <h3>Contexte</h3>
+                    <p class="project-description">Le plugin de signature RSForm nécessitait une licence additionnelle. Une solution sur mesure a été développée avec Signature Pad afin de garder la maîtrise technique et éviter une dépendance externe.</p>
+                </div>
+
+                <div class="mission-subsection mission-objectifs">
+                    <h3>Objectifs</h3>
+                    <ul>
+                        <li>Permettre la validation des documents via une signature manuscrite numérique.</li>
+                        <li>Renforcer la conformité et la continuité du processus de contractualisation.</li>
+                    </ul>
+                </div>
+
+                <div class="mission-subsection mission-outils">
+                    <h3>Outils</h3>
+                    <div class="mission-tools">
+                        <span class="mission-tool">HTML</span>
+                        <span class="mission-tool">CSS</span>
+                        <span class="mission-tool">JavaScript</span>
+                        <span class="mission-tool">PHP</span>
+                        <span class="mission-tool">base64</span>
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-taches">
+                    <h3>Tâches réalisées</h3>
+                    <div class="mission-task-list">
+                        <div class="mission-task-item">
+                            <p>Intégration d'un pad de signature dans les formulaires web.</p>
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Capture de la signature via canvas HTML5.</p>
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Conversion en base64 pour stockage et intégration dans les PDF.</p>
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Génération automatique de PDF incluant la signature.</p>
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Mise en place d'une validation bloquante si la signature est absente.</p>
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Redimensionnement responsive du canvas.</p>
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Stockage de la signature dans un champ caché.</p>
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Injection dynamique dans les documents générés.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-illustrations">
+                    <h3>Illustrations</h3>
+                    <div class="mission-images" id="signature-images">
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-limites">
+                    <h3>Limites</h3>
+                    <ul>
+                        <li>Implémentation correspondant à une signature électronique simple (sans authentification forte ni certificat).</li>
+                    </ul>
+                </div>
+
+                <div class="mission-subsection mission-apprentissages">
+                    <h3>Compétences acquises</h3>
+                    <ul>
+                        <li>Gestion de données graphiques (canvas → base64).</li>
+                        <li>Intégration front/back pour génération documentaire.</li>
+                        <li>Mise en place de mécanismes de validation utilisateur.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section stage-mission-section" id="mission-seo-visibilite">
+            <div class="card project-container stage-mission-card">
+                <h2 class="project-title">Amélioration du référencement et de la visibilité en ligne</h2>
+
+                <div class="mission-subsection mission-contexte">
+                    <h3>Contexte</h3>
+                    <p class="project-description">Le site devait maintenir sa visibilité dans un environnement concurrentiel, avec une logique d'amélioration continue du contenu et du suivi des performances.</p>
+                </div>
+
+                <div class="mission-subsection mission-objectifs">
+                    <h3>Objectifs</h3>
+                    <ul>
+                        <li>Renforcer le positionnement du site face à la concurrence.</li>
+                        <li>Soutenir la génération de trafic organique durable.</li>
+                    </ul>
+                </div>
+
+                <div class="mission-subsection mission-outils">
+                    <h3>Outils</h3>
+                    <div class="mission-tools">
+                        <span class="mission-tool">Google Search Console</span>
+                        <span class="mission-tool">SemRush</span>
+                        <span class="mission-tool">Sitemap Generator</span>
+                        <span class="mission-tool">ChatGPT</span>
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-taches">
+                    <h3>Tâches réalisées</h3>
+                    <div class="mission-task-list">
+                        <div class="mission-task-item">
+                            <p>Analyse des performances SEO et identification des opportunités d'amélioration.</p>
+                            
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Optimisation du contenu et de la structure du site pour améliorer le classement.</p>
+                            
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Création de contenus SEO avec l'appui de ChatGPT (descriptions produits, articles).</p>
+                            
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Suivi continu des performances et ajustement de la stratégie SEO.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-illustrations">
+                    <h3>Illustrations</h3>
+                    <div class="mission-images" id="seo-visibilite-images">
+                    </div>
+                </div>
+                <div class="mission-subsection mission-apprentissages">
+                    <h3>Ce que j'ai appris</h3>
+                    <ul>
+                        <li>Stratégies avancées de SEO et optimisation on-page.</li>
+                        <li>Pilotage du référencement avec des outils de suivi.</li>
+                        <li>Production de contenus SEO avec l'appui de l'IA.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section stage-mission-section" id="mission-cybersecurite">
+            <div class="card project-container stage-mission-card">
+                <h2 class="project-title">Cybersécurité</h2>
+
+                <div class="mission-subsection mission-contexte">
+                    <h3>Contexte</h3>
+                    <p class="project-description">Des documents sensibles (CV, lettres de motivation, RIB) étaient téléversés via les formulaires. Le défi était de supprimer l'accès public direct sans casser les traitements Joomla/RSForm.</p>
+                </div>
+
+                <div class="mission-subsection mission-objectifs">
+                    <h3>Objectifs</h3>
+                    <ul>
+                        <li>Protéger les données sensibles déposées via les formulaires du site.</li>
+                        <li>Réduire les risques d'accès non autorisé et de perte d'intégrité des fichiers.</li>
+                    </ul>
+                </div>
+
+                <div class="mission-subsection mission-outils">
+                    <h3>Outils</h3>
+                    <div class="mission-tools">
+                        <span class="mission-tool">FileZilla</span>
+                        <span class="mission-tool">Règles de pare-feu</span>
+                        <span class="mission-tool">Paramétrage des droits d'accès</span>
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-taches">
+                    <h3>Tâches réalisées</h3>
+                    <div class="mission-task-list">
+                        <div class="mission-task-item">
+                            <p>Configuration de FileZilla pour restreindre les accès FTP aux dossiers sensibles (CV, lettres de motivation, RIB).</p>
+                            
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Modification des permissions d'accès de 755 à 750.</p>
+                            
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Mise en place d'une nomenclature unique des fichiers pour éviter conflits et écrasements.</p>
+                            
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Application de la permission Linux 750 sur le dossier d'uploads pour bloquer l'accès internet direct.</p>
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Maintien du fonctionnement applicatif: upload et lecture restent possibles pour l'application.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-illustrations">
+                    <h3>Illustrations</h3>
+                    <div class="mission-images" id="cybersecurite-images">
+
+                    </div>
+                </div>
+                <div class="mission-subsection mission-apprentissages">
+                    <h3>Ce que j'ai appris</h3>
+                    <ul>
+                        <li>Configuration d'accès sécurisés pour protéger les données.</li>
+                        <li>Gestion des permissions sur les fichiers sensibles.</li>
+                        <li>Importance d'une nomenclature fiable pour la maintenance.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section stage-mission-section" id="mission-champs-repetables">
+            <div class="card project-container stage-mission-card">
+                <h2 class="project-title">Modification d'un formulaire avec champs répétables</h2>
+
+                <div class="mission-subsection mission-contexte">
+                    <h3>Contexte</h3>
+                    <p class="project-description">Le formulaire devait gérer des cas métier variés: sections répétables selon les étages, homogénéisation de certains champs et contrôles plus stricts entre fréquence d'intervention et jours cochés.</p>
+                </div>
+
+                <div class="mission-subsection mission-objectifs">
+                    <h3>Objectifs</h3>
+                    <ul>
+                        <li>Adapter la collecte d'informations aux situations multi-étages des entreprises clientes.</li>
+                        <li>Garantir une saisie flexible tout en conservant une structure de données exploitable.</li>
+                    </ul>
+                </div>
+
+                <div class="mission-subsection mission-outils">
+                    <h3>Outils</h3>
+                    <div class="mission-tools">
+                        <span class="mission-tool">HTML</span>
+                        <span class="mission-tool">CSS</span>
+                        <span class="mission-tool">JavaScript</span>
+                        <span class="mission-tool">PHP</span>
+                        <span class="mission-tool">base64</span>
+                        <span class="mission-tool">Joomla</span>
+                        <span class="mission-tool">Python</span>
+                    </div>
+                </div>
+
+                <div class="mission-subsection mission-taches">
+                    <h3>Tâches réalisées</h3>
+                    <div class="mission-task-list">
+                        <div class="mission-task-item">
+                            <p>Modification du formulaire pour permettre la répétition de champs selon le nombre d'étages occupés.</p>
+                            
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Utilisation de Python pour gérer la logique de répétition depuis la structure XML du formulaire.</p>
+                            
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Adaptation de la génération PDF pour inclure uniquement les champs répétés renseignés.</p>
+                            
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Passage de champs texte vers des choix structurés pour améliorer l'homogénéité des réponses.</p>
+                        </div>
+                        <div class="mission-task-item">
+                            <p>Mise en place d'une validation dynamique fréquence/jours avec blocage de soumission en cas d'incohérence.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mission-subsection mission-illustrations">
+                    <h3>Illustrations</h3>
+                    <div class="mission-images" id="champs-repetables-images">
+
+                    </div>
+                </div>
+                <div class="mission-subsection mission-apprentissages">
+                    <h3>Ce que j'ai appris</h3>
+                    <ul>
+                        <li>Conception de formulaires dynamiques avec champs répétables.</li>
+                        <li>Gestion de logique conditionnelle pour des données variables.</li>
+                        <li>Intégration de données dynamiques dans des documents PDF.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Pour toute question ou collaboration, n'hésitez pas à me contacter :</p>
+            <ul>
+                <li><a href="mailto:contact@grandlaye.fr" title="Email">contact@grandlaye.fr</a></li>
+                <li><a href="https://www.linkedin.com/in/sowabdallah/" target="_blank" title="LinkedIn">Abdallah Sow</a></li>
+                <li><a href="https://github.com/grandlay-e" target="_blank" title="GitHub">GrandLay-e</a></li>
+            </ul>
+        </section>
+        <section class="copyright"><p align="center"> ©2025 Abdallah Sow. Tous droits réservés.</p></section>
+        <a href="#" class="back-to-top" title="Retour en haut"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m296-224-56-56 240-240 240 240-56 56-184-183-184 183Zm0-240-56-56 240-240 240 240-56 56-184-183-184 183Z"/></svg></a>
+    </footer>
+</body>
+</html>
+
+
