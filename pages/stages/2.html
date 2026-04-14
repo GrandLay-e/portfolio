@@ -30,7 +30,23 @@
             grid-column: 1 / -1;
         }
 
+        #pdf-formulaires-images {
+            display: grid;
+            grid-template-columns: 1fr 1.05fr;
+            gap: 2em;
+            margin: 2em;
+        }
+        #pdf-formulaires-images > :nth-child(1) {
+            grid-column: 1 / -1;
+        }
+
         @media (max-width: 900px) {
+            .mission-images {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1em 0;
+                
+            }
             #api-formulaires-images {
                 grid-template-columns: 1fr;
                 gap: 1em;
@@ -39,6 +55,12 @@
 
             #api-formulaires-images > :nth-child(3) {
                 grid-column: auto;
+            }
+            #pdf-formulaires-images {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1em;
+                margin: 1em 0;
             }
         }
     </style>
@@ -143,6 +165,7 @@
                         <img src="../../images/stages/2/code php appel api siren.png" alt="Code PHP pour l'appel à l'API Siren">
                         <img src="../../images/stages/2/code js fetch proxy php.png" alt="Code JavaScript pour le fetch vers le proxy PHP">
                         <img src="../../images/stages/2/exemple appel api siren.png" alt="Test de saisie d'un SIREN dans le formulaire avec pré-remplissage des données via l'API">
+                        <img src="../../images/stages/2/reggex.png" alt="Code regex pour valider le format des adresses saisies dans le formulaire">
                     </div>
                 </div>
 
@@ -216,7 +239,9 @@
                 <div class="mission-subsection mission-illustrations">
                     <h3>Illustrations</h3>
                     <div class="mission-images" id="pdf-formulaires-images">
-
+                        <img src="../../images/stages/2/code html to pdf imagebase64.png" alt="Début du code base64 pour intégrer le logo dans le template HTML du PDF">
+                        <img src="../../images/stages/2/rendu pdf entete.png" alt="Image du rendu du PDF avec le logo intégré dans l'entête du document">
+                        <img src="../../images/stages/2/html to pdf section facturation.png" alt="Image de la section de facturation dans le PDF">
                     </div>
                 </div>
                 <div class="mission-subsection mission-apprentissages">
