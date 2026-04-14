@@ -30,7 +30,68 @@
             grid-column: 1 / -1;
         }
 
+        #pdf-formulaires-images {
+            display: grid;
+            grid-template-columns: 1fr 1.05fr;
+            gap: 2em;
+            margin: 2em;
+        }
+        #pdf-formulaires-images > :nth-child(1) {
+            grid-column: 1 / -1;
+        }
+        #signature-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 16px; 
+        }
+
+        #signature-images > :nth-child(1) {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        #signature-images > :nth-child(2) {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        #signature-images > :nth-child(3) {
+            grid-column: 2;
+            grid-row: 1 / span 2;
+        }
+        #signature-images > :nth-child(4) {
+            grid-column: 1 / -1;
+            grid-row: 3;
+        }
+        #seo-visibilite-images {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin: 2em;
+        }
+        #cybersecurite-images {
+            margin-left: 2em;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        #cybersecurite-images > :nth-child(2) {
+            width: 65%;
+            grid-column: 2;
+            grid-row: 1 / span 2;
+        }
+
+        
+
         @media (max-width: 900px) {
+            .mission-images {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1em 0;
+                
+            }
             #api-formulaires-images {
                 grid-template-columns: 1fr;
                 gap: 1em;
@@ -39,6 +100,43 @@
 
             #api-formulaires-images > :nth-child(3) {
                 grid-column: auto;
+            }
+            #pdf-formulaires-images {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1em;
+                margin: 1em 0;
+            }
+            #signature-images {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                gap: 16px; 
+            }
+            #signature-images > :nth-child(1), 
+            #signature-images > :nth-child(2),
+            #signature-images > :nth-child(3),
+            #signature-images > :nth-child(4)
+            {
+                grid-column: auto;
+                grid-row: auto; 
+            }
+
+            #seo-visibilite-images {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 16px;
+                margin: 0;
+            }
+           #cybersecurite-images {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 16px;
+                margin: 1em 0;
+            }
+            #cybersecurite-images > :nth-child(2) {
+                grid-column: auto;
+                grid-row: auto;
             }
         }
     </style>
@@ -143,6 +241,7 @@
                         <img src="../../images/stages/2/code php appel api siren.png" alt="Code PHP pour l'appel à l'API Siren">
                         <img src="../../images/stages/2/code js fetch proxy php.png" alt="Code JavaScript pour le fetch vers le proxy PHP">
                         <img src="../../images/stages/2/exemple appel api siren.png" alt="Test de saisie d'un SIREN dans le formulaire avec pré-remplissage des données via l'API">
+                        <img src="../../images/stages/2/reggex.png" alt="Code regex pour valider le format des adresses saisies dans le formulaire">
                     </div>
                 </div>
 
@@ -216,7 +315,9 @@
                 <div class="mission-subsection mission-illustrations">
                     <h3>Illustrations</h3>
                     <div class="mission-images" id="pdf-formulaires-images">
-
+                        <img src="../../images/stages/2/code html to pdf imagebase64.png" alt="Début du code base64 pour intégrer le logo dans le template HTML du PDF">
+                        <img src="../../images/stages/2/rendu pdf entete.png" alt="Image du rendu du PDF avec le logo intégré dans l'entête du document">
+                        <img src="../../images/stages/2/html to pdf section facturation.png" alt="Image de la section de facturation dans le PDF">
                     </div>
                 </div>
                 <div class="mission-subsection mission-apprentissages">
@@ -291,6 +392,12 @@
                 <div class="mission-subsection mission-illustrations">
                     <h3>Illustrations</h3>
                     <div class="mission-images" id="signature-images">
+                        <img src="../../images/stages/2/code pad signature.png" alt="Code HTML, Canva de signature et champ caché pour stocker la signature en base64">
+                        <img src="../../images/stages/2/conversion signature en base64.png" alt="Code JavaScript pour convertir la signature du canvas en base64 et la stocker dans un champ caché">
+                        <img src="../../images/stages/2/pad signature.png" alt="Visuel du pad de signature intégré dans le formulaire">
+                        <img src="../../images/stages/2/php recupere signature.png" alt="Code php pour récupérer la signature en base64 et l'injecter dans le template HTML du PDF">
+                        <img src="../../images/stages/2/html integrer signature.png" alt="Code HTML pour intégrer la signature dans le document PDF">
+                        <img src="../../images/stages/2/rendu pdf signature.png" alt="Rendu du PDF avec la signature intégrée">
                     </div>
                 </div>
 
@@ -364,6 +471,9 @@
                 <div class="mission-subsection mission-illustrations">
                     <h3>Illustrations</h3>
                     <div class="mission-images" id="seo-visibilite-images">
+                        <img src="../../images/stages/2/semrush 1.png" alt="Capture d'écran de l'outil SemRush montrant les performances SEO du site">
+                        <img src="../../images/stages/2/semrush 2.png" alt="Capture d'écran de l'outil SemRush montrant les performances SEO du site">
+
                     </div>
                 </div>
                 <div class="mission-subsection mission-apprentissages">
@@ -398,8 +508,6 @@
                     <h3>Outils</h3>
                     <div class="mission-tools">
                         <span class="mission-tool">FileZilla</span>
-                        <span class="mission-tool">Règles de pare-feu</span>
-                        <span class="mission-tool">Paramétrage des droits d'accès</span>
                     </div>
                 </div>
 
@@ -430,6 +538,11 @@
                 <div class="mission-subsection mission-illustrations">
                     <h3>Illustrations</h3>
                     <div class="mission-images" id="cybersecurite-images">
+                        <img src="../../images/stages/2/accès au document avant le blocage.png" alt="Acces direct à un document via son URL avant la modification des permissions">
+                        <img src="../../images/stages/2/modification autorisation filezilla.png" alt="Capture d'écran de FileZilla montrant la configuration des permissions pour restreindre l'accès aux dossiers sensibles">
+                        <img src="../../images/stages/2/tentative acces après blocage.png" alt="Tentative d'accès à un document après le blocage">
+                        <img src="../../images/stages/2/code renommage rib.png" alt="Capture d'écran du code de renommage du RIB">
+                        <img src="../../images/stages/2/rib renomé.png" alt="Capture d'écran du RIB renommé avec une nomenclature unique pour éviter les conflits et écrasements">
 
                     </div>
                 </div>
