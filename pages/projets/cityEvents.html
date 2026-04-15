@@ -1,165 +1,253 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-887RENWPTQ"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-887RENWPTQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-887RENWPTQ');
+  </script>
 
-	gtag('config', 'G-887RENWPTQ');
-	</script>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>CityEvents | Abdallah Sow</title>
-	<meta name="description" content="Détail du projet CityEvents, application web collaborative Symfony pour créer, rechercher et gérer des événements urbains.">
-	<meta name="keywords" content="CityEvents, Symfony, PHP, MySQL, JavaScript, HTML, CSS, projet collaboratif, BTS SIO, Abdallah Sow">
-	<meta name="author" content="Abdallah Sow">
-	<link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/193377484?v=4">
-	<link rel="stylesheet" href="../../css/style.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-	<script src="../../js/main.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CityEvents | Projet Symfony (PHP/Twig) — Abdallah Sow</title>
+  <meta name="description" content="CityEvents : application web Symfony pour créer, rechercher et gérer des événements locaux. Projet full-stack (PHP, Twig, Doctrine, MySQL) développé en équipe." />
+  <meta name="keywords" content="CityEvents, Symfony, PHP, Twig, Doctrine, MySQL, CRUD, authentification, filtres, portfolio, Abdallah Sow" />
+  <meta name="author" content="Abdallah Sow" />
+
+  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/193377484?v=4" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="../../js/main.js" defer></script>
+  <style>
+    .project-gallery {
+      margin-top: 20px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .gallery-item {
+      margin: 0;
+      padding: 10px;
+      border-radius: 10px;
+      background: rgba(35, 43, 69, 0.92);
+      border: 1px solid rgba(252, 163, 17, 0.2);
+    }
+
+    .gallery-item img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .gallery-item figcaption {
+      margin-top: 8px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
-	<button class="menu-toggle" aria-label="Menu">
-		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1a2236"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
-	</button>
-	<nav>
-		<ul>
-			<li>
-				<a href="../../index.html">
-					<span class="material-symbols-outlined">home</span>
-					<span class="nav-text">Accueil</span>
-				</a>
-			</li>
-			<li>
-				<a href="../parcours.html">
-					<span class="material-symbols-outlined">school</span>
-					<span class="nav-text">Formation</span>
-				</a>
-			</li>
-			<li>
-				<a href="../stages/index.html">
-					<span class="material-symbols-outlined">work</span>
-					<span class="nav-text">Expériences</span>
-				</a>
-			</li>
-			<li>
-				<a href="../competences.html">
-					<span class="material-symbols-outlined">psychology</span>
-					<span class="nav-text">Compétences</span>
-				</a>
-			</li>
-			<li>
-				<a href="index.html">
-					<span class="material-symbols-outlined">code</span>
-					<span class="nav-text">Projets</span>
-				</a>
-			</li>
-			<li>
-				<a href="../veille.html">
-					<span class="material-symbols-outlined">travel_explore</span>
-					<span class="nav-text">Veille</span>
-				</a>
-			</li>
-		</ul>
-	</nav>
+  <button class="menu-toggle" aria-label="Menu">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1a2236">
+      <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+    </svg>
+  </button>
 
-	<main id="projects-main">
-		<h1>CITYEVENTS</h1>
-		<section class="project-section">
-			<div class="project-container card">
-				<h2 class="project-title">CityEvents</h2>
-				<div class="used-tech">
-					<span class="used-language">
-						<img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP Logo" style="width:20px; height:20px; vertical-align:middle;">
-						PHP
-					</span>
-					<span class="used-language">
-						<img src="https://symfony.com/logos/symfony_black_03.png" alt="Symfony Logo" style="width:20px; height:20px; vertical-align:middle;">
-						Symfony
-					</span>
-					<span class="used-language">
-						<img src="../../images/mysql.png" alt="MySQL Logo" style="width:24px; height:24px; vertical-align:middle;">
-						MySQL
-					</span>
-					<span class="used-language">
-						<img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML Logo" style="width:20px; height:20px; vertical-align:middle;">
-						HTML/CSS
-					</span>
-					<span class="used-language">
-						<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo" style="width:20px; height:20px; vertical-align:middle;">
-						JavaScript
-					</span>
-				</div>
-				<p class="project-description">
-					<strong>🤝 Projet collaboratif</strong> - Application web full-stack développée en équipe avec le framework Symfony pour la gestion et la découverte d'événements urbains.
-					Plateforme interactive permettant aux utilisateurs de créer, consulter et participer à des événements dans leur ville.
-				</p>
-				<div class="project-features">
-					<h4>👥 Travail d'équipe et organisation :</h4>
-					<ul>
-						<li><strong>Développement collaboratif </strong> Coordination avec GitHub (branches, pull requests, code reviews)</li>
-						<li><strong>Communication </strong> Documentation partagée, standards de code communs</li>
-					</ul>
-				</div>
-				<div class="project-features">
-					<h4>🔧 Fonctionnalités principales :</h4>
-					<ul>
-						<li><strong>Gestion d'événements </strong> Création, modification et suppression d'événements par les utilisateurs</li>
-						<li><strong>Authentification utilisateur </strong> Système complet d'inscription, connexion et gestion de profils</li>
-						<li><strong>Recherche et filtrage </strong> Recherche par date, catégorie, localisation et mots-clés</li>
-						<li><strong>Participation aux événements </strong> Inscription et suivi des événements</li>
-						<li><strong>Système de catégories </strong> Classification des événements (concerts, sports, culture, etc.)</li>
-						<li><strong>Interface responsive </strong> Design adaptatif pour mobile et desktop</li>
-						<li><strong>Base de données relationnelle </strong> Modélisation avec Doctrine ORM et MySQL</li>
-						<li><strong>Gestion des médias </strong> Upload et affichage d'images pour les événements</li>
-						<li><strong>Notifications </strong> Système d'alertes pour les événements à venir</li>
-						<li><strong>Panel administrateur </strong> Interface d'administration pour la gestion du contenu</li>
-					</ul>
-				</div>
-				<a class="project-link" href="https://github.com/GrandLay-e/CityEvents">
-					<img src="../../images/GitHub.png" alt="github logo" style="width:60px; height:30px; vertical-align:middle;">
-				</a>
-				<p class="project-description">
-					<a href="eyreinProducts.html">Voir aussi: Eyrein Product</a>
-				</p>
-			</div>
-		</section>
-	</main>
+  <nav>
+    <ul>
+      <li>
+        <a href="../../index.html">
+          <span class="material-symbols-outlined">home</span>
+          <span class="nav-text">Accueil</span>
+        </a>
+      </li>
+      <li>
+        <a href="../parcours.html">
+          <span class="material-symbols-outlined">school</span>
+          <span class="nav-text">Formation</span>
+        </a>
+      </li>
+      <li>
+        <a href="../stages/index.html">
+          <span class="material-symbols-outlined">work</span>
+          <span class="nav-text">Expériences</span>
+        </a>
+      </li>
+      <li>
+        <a href="../competences.html">
+          <span class="material-symbols-outlined">psychology</span>
+          <span class="nav-text">Compétences</span>
+        </a>
+      </li>
+      <li>
+        <a href="index.html">
+          <span class="material-symbols-outlined">code</span>
+          <span class="nav-text">Projets</span>
+        </a>
+      </li>
+      <li>
+        <a href="../veille.html">
+          <span class="material-symbols-outlined">travel_explore</span>
+          <span class="nav-text">Veille</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
-	<footer>
-		<section id="contact">
-			<h2>Contact</h2>
-			<p>Pour toute question ou collaboration, n'hésitez pas à me contacter :</p>
-			<ul>
-				<li>
-					<a href="mailto:contact@grandlaye.fr" title="Email">
-						<img src="https://img.icons8.com/ios-filled/24/ffffff/new-post.png" alt="Email" style="vertical-align:middle; margin-right:8px;">
-						contact@grandlaye.fr
-					</a>
-				</li>
-				<li>
-					<a href="https://www.linkedin.com/in/sowabdallah/" target="_blank" title="LinkedIn">
-						<img src="https://img.icons8.com/ios-filled/24/ffffff/linkedin.png" alt="LinkedIn" style="vertical-align:middle; margin-right:8px;">
-						Abdallah Sow
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/grandlay-e" target="_blank" title="GitHub">
-						<img src="https://img.icons8.com/ios-glyphs/24/ffffff/github.png" alt="GitHub" style="vertical-align:middle; margin-right:8px;">
-						GrandLay-e
-					</a>
-				</li>
-			</ul>
-		</section>
-		<section class="copyright">
-			<p align="center"> ©2025 Abdallah Sow. Tous droits réservés.</p>
-		</section>
-		<a href="#" class="back-to-top" title="Retour en haut">
-			<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m296-224-56-56 240-240 240 240-56 56-184-183-184 183Zm0-240-56-56 240-240 240 240-56 56-184-183-184 183Z"/></svg>
-		</a>
-	</footer>
+  <main id="projects-main">
+    <h1>CITYEVENTS</h1>
+
+    <section class="project-section">
+      <div class="project-container card">
+        <h2 class="project-title">CityEvents</h2>
+
+        <div class="used-tech">
+          <span class="used-language">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP Logo" style="width:20px; height:20px; vertical-align:middle;">
+            PHP
+          </span>
+          <span class="used-language">
+            <img src="https://symfony.com/logos/symfony_black_03.png" alt="Symfony Logo" style="width:20px; height:20px; vertical-align:middle;">
+            Symfony
+          </span>
+          <span class="used-language">
+            <img src="../../images/mysql.png" alt="MySQL Logo" style="width:24px; height:24px; vertical-align:middle;">
+            MySQL
+          </span>
+          <span class="used-language">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML Logo" style="width:20px; height:20px; vertical-align:middle;">
+            HTML/CSS
+          </span>
+          <span class="used-language">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo" style="width:20px; height:20px; vertical-align:middle;">
+            JavaScript
+          </span>
+        </div>
+
+        <p class="project-description">
+          <strong>Projet collaboratif</strong> - Application web Symfony permettant de creer, rechercher et gerer des evenements locaux.
+          Le projet couvre la conception full-stack, la gestion des roles utilisateurs et l'organisation d'equipe avec GitHub.
+        </p>
+
+        <div class="project-features">
+          <h4>Fonctionnalites principales</h4>
+          <ul>
+            <li><strong>Gestion d'evenements</strong> : creation, edition et suppression d'evenements</li>
+            <li><strong>Authentification</strong> : inscription, connexion et controle d'acces selon les roles</li>
+            <li><strong>Recherche et filtres</strong> : categorie, ville, date et mots-cles</li>
+            <li><strong>Base de donnees</strong> : modelisation relationnelle avec Doctrine ORM et MySQL</li>
+            <li><strong>Interface responsive</strong> : pages Twig adaptees mobile et desktop</li>
+          </ul>
+        </div>
+
+        <div class="project-features">
+          <h4>Ce que j'ai realise</h4>
+          <ul>
+            <li>Developpement des routes, controleurs et formulaires Symfony</li>
+            <li>Mise en place des validations et de la coherence des donnees</li>
+            <li>Participation au workflow d'equipe : branches, pull requests, code reviews</li>
+          </ul>
+        </div>
+
+        <div class="project-gallery">
+          <h4>Apercu en images</h4>
+          <div class="gallery-grid">
+            <figure class="gallery-item">
+              <img src="../../images/projets/homepage%20cityevents.png"
+                   alt="Page d’accueil CityEvents"
+                   loading="lazy" decoding="async">
+              <figcaption>Page d'accueil avec navigation et categories populaires.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+              <img src="../../images/projets/filter%20events.png"
+                   alt="Filtrage des événements"
+                   loading="lazy" decoding="async">
+              <figcaption>Interface de recherche avec filtres de categorie et de ville.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+              <img src="../../images/projets/events%20display.png"
+                   alt="Affichage des événements"
+                   loading="lazy" decoding="async">
+              <figcaption>Affichage des evenements sous forme de cartes.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+              <img src="../../images/projets/github%20project.png"
+                   alt="Organisation GitHub Project"
+                   loading="lazy" decoding="async">
+              <figcaption>Organisation du travail d'equipe avec GitHub Project.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <p class="project-description" style="margin-top:14px;">
+          <a class="project-link" href="https://github.com/GrandLay-e/CityEvents" target="_blank" rel="noopener">
+            <img src="../../images/GitHub.png" alt="github logo" style="width:60px; height:30px; vertical-align:middle;">
+          </a>
+        </p>
+
+        <p class="project-description">
+          <a href="eyreinProducts.html">Voir aussi : Eyrein Product</a>
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Pour toute question ou collaboration, n'hésitez pas à me contacter :</p>
+      <ul>
+        <li>
+          <a href="mailto:contact@grandlaye.fr" title="Email">
+            <img src="https://img.icons8.com/ios-filled/24/ffffff/new-post.png" alt="Email" style="vertical-align:middle; margin-right:8px;">
+            contact@grandlaye.fr
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/sowabdallah/" target="_blank" title="LinkedIn" rel="noopener">
+            <img src="https://img.icons8.com/ios-filled/24/ffffff/linkedin.png" alt="LinkedIn" style="vertical-align:middle; margin-right:8px;">
+            Abdallah Sow
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/grandlay-e" target="_blank" title="GitHub" rel="noopener">
+            <img src="https://img.icons8.com/ios-glyphs/24/ffffff/github.png" alt="GitHub" style="vertical-align:middle; margin-right:8px;">
+            GrandLay-e
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="copyright">
+      <p align="center">©2025 Abdallah Sow. Tous droits réservés.</p>
+    </section>
+
+    <a href="#" class="back-to-top" title="Retour en haut">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+        <path d="m296-224-56-56 240-240 240 240-56 56-184-183-184 183Zm0-240-56-56 240-240 240 240-56 56-184-183-184 183Z"/>
+      </svg>
+    </a>
+  </footer>
 </body>
 </html>

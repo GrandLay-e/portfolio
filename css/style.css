@@ -419,7 +419,7 @@ li{
     justify-content: center;
     gap: 15%;
 }
-.used-language {
+.used-language, .badge {
     background: #2d3a5a;
     border-radius: var(--border-radius);
     padding: 8px;
@@ -427,7 +427,7 @@ li{
     transition: transform var(--transition), background var(--transition);
     color: var(--accent-bg);
 }
-.used-language:hover {
+.used-language:hover, .badge:hover {
     background: #fca31122;
     cursor: pointer;
     transform: scale(1.05);
@@ -607,7 +607,7 @@ li{
     border-radius: 8px;
 }
 
-.used-language {
+.used-language, .badge {
     background: linear-gradient(135deg, #2d3a5a, #1e283c);
     border: 1px solid rgba(252, 163, 17, 0.3);
     border-radius: 20px;
@@ -623,7 +623,7 @@ li{
     white-space: nowrap;
 }
 
-.used-language:hover {
+.used-language:hover, .badge:hover {
     background: linear-gradient(135deg, var(--accent-bg), #ffbe5c);
     color: var(--primary-bg);
     transform: translateY(-2px) scale(1.08);
@@ -1240,7 +1240,7 @@ main > h1 {
         min-height: 120px;
     }
 
-    .used-language {
+    .used-language, .badge {
         font-size: 0.8em;
         padding: 6px 10px;
     }
