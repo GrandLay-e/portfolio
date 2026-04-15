@@ -22,6 +22,18 @@
     <style>
         .mission-images img { flex: 1 1 320px; max-width: 100%; min-width: 0; width: 100%; height: auto; border-radius: 10px; object-fit: cover; }
         .stage-code { background: #111827; color: #f8fafc; padding: 12px; border-radius: 10px; overflow-x: auto; font-size: 0.92rem; }
+        .stage-company-logo {
+            display: flex;
+            justify-content: center;
+            margin: 0 0 14px;
+        }
+
+        .stage-company-logo img {
+            width: min(240px, 80%);
+            height: auto;
+            object-fit: contain;
+        }
+
         /* Images de référencement */
         #referencement-images{
             display: grid;
@@ -73,9 +85,12 @@
             <div class="card project-container stage-intro-card">
                 <h2 class="project-title">Introduction du stage</h2>
                 <div class="mission-subsection mission-contexte">
+                    <div class="stage-company-logo">
+                        <img src="../../images/stages/image.png" alt="Logo de l'entreprise NEOSIT">
+                    </div>
                     <h3>Cadre</h3>
-                    <p class="project-description">Ce stage s'inscrit dans un parcours réalisé au sein de la même organisation, NEOSIT, entreprise spécialisée dans les services de nettoyage professionnel en Île-de-France.</p>
-                    <p class="project-description">L'objectif global de cette première période était de renforcer la présence en ligne de l'entreprise, d'améliorer la qualité des contenus et de préparer les bases techniques des automatisations développées ensuite en 2e année.</p>
+                    <p class="project-description">Ce stage s'est déroulé chez NEOSIT, entreprise spécialisée dans les services de nettoyage professionnel en Île-de-France.</p>
+                    <p class="project-description">L'objectif global était de renforcer la présence en ligne de l'entreprise, d'améliorer la qualité des contenus et de mettre en place des solutions techniques utiles aux équipes.</p>
                 </div>
                 <div class="mission-subsection mission-liens">
                     <h3>Navigation entre stages</h3>

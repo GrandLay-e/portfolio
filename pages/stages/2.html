@@ -20,6 +20,18 @@
     <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/193377484?v=4">
     <style>
         .mission-images img { flex: 1 1 320px; max-width: 100%; min-width: 0; width: 100%; height: auto; border-radius: 10px; object-fit: cover; }
+        .stage-company-logo {
+            display: flex;
+            justify-content: center;
+            margin: 0 0 14px;
+        }
+
+        .stage-company-logo img {
+            width: min(240px, 80%);
+            height: auto;
+            object-fit: contain;
+        }
+
         #api-formulaires-images{
             display: grid;
             grid-template-columns: 0.9fr 1fr;
@@ -180,8 +192,11 @@
             <div class="card project-container stage-intro-card">
                 <h2 class="project-title">Introduction du stage</h2>
                 <div class="mission-subsection mission-contexte">
+                    <div class="stage-company-logo">
+                        <img src="../../images/stages/image.png" alt="Logo de l'entreprise NEOSIT">
+                    </div>
                     <h3>Cadre</h3>
-                    <p class="project-description">Ce stage de 2e année s'est déroulé chez NEOSIT, à Montigny-le-Bretonneux, du 19 janvier 2026 au 06 mars 2026, dans la continuité du stage de 1re année réalisé dans la même organisation.</p>
+                    <p class="project-description">Ce stage de 2e année s'est déroulé chez NEOSIT, à Montigny-le-Bretonneux, du 19 janvier 2026 au 06 mars 2026.</p>
                     <p class="project-description">La mission globale était de fiabiliser les formulaires métiers, sécuriser les documents sensibles et améliorer l'efficacité opérationnelle côté client comme côté administration.</p>
                 </div>
                 <div class="mission-subsection mission-liens">
