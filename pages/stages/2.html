@@ -20,6 +20,18 @@
     <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/193377484?v=4">
     <style>
         .mission-images img { flex: 1 1 320px; max-width: 100%; min-width: 0; width: 100%; height: auto; border-radius: 10px; object-fit: cover; }
+        .stage-company-logo {
+            display: flex;
+            justify-content: center;
+            margin: 0 0 14px;
+        }
+
+        .stage-company-logo img {
+            width: min(240px, 80%);
+            height: auto;
+            object-fit: contain;
+        }
+
         #api-formulaires-images{
             display: grid;
             grid-template-columns: 0.9fr 1fr;
@@ -82,7 +94,17 @@
             grid-column: 2;
             grid-row: 1 / span 2;
         }
+        #champs-repetables-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: 1fr;
+            gap: 16px;
+            margin: 2em;
+        }
 
+        #champs-repetables-images > :first-child {
+            grid-row: span 3;
+        }
         
 
         @media (max-width: 900px) {
@@ -138,6 +160,13 @@
                 grid-column: auto;
                 grid-row: auto;
             }
+            #champs-repetables-images {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-auto-rows: auto;
+                gap: 16px;
+                margin: 1em 0;
+            }
         }
     </style>
 </head>
@@ -163,8 +192,11 @@
             <div class="card project-container stage-intro-card">
                 <h2 class="project-title">Introduction du stage</h2>
                 <div class="mission-subsection mission-contexte">
+                    <div class="stage-company-logo">
+                        <img src="../../images/stages/image.png" alt="Logo de l'entreprise NEOSIT">
+                    </div>
                     <h3>Cadre</h3>
-                    <p class="project-description">Ce stage de 2e année s'est déroulé chez NEOSIT, à Montigny-le-Bretonneux, du 19 janvier 2026 au 06 mars 2026, dans la continuité du stage de 1re année réalisé dans la même organisation.</p>
+                    <p class="project-description">Ce stage de 2e année s'est déroulé chez NEOSIT, à Montigny-le-Bretonneux, du 19 janvier 2026 au 06 mars 2026.</p>
                     <p class="project-description">La mission globale était de fiabiliser les formulaires métiers, sécuriser les documents sensibles et améliorer l'efficacité opérationnelle côté client comme côté administration.</p>
                 </div>
                 <div class="mission-subsection mission-liens">
@@ -613,6 +645,10 @@
                 <div class="mission-subsection mission-illustrations">
                     <h3>Illustrations</h3>
                     <div class="mission-images" id="champs-repetables-images">
+                        <img src="../../images/stages/2/sidebar rsform.png" alt="Menu de configuration du formulaire dans l'administration Joomla/RSForm" style="width: 50%; margin: 0 auto;">
+                        <img src="../../images/stages/2/champs rsform.png" alt="Capture d'cran de champs rsform">
+                        <img src="../../images/stages/2/fonction remplacement python.png" alt="Capture d'écran du code Python pour gérer la logique de répétition des champs dans le formulaire">
+                        <img src="../../images/stages/2/code changer type de champ.png" alt="Capture d'écran du code pour changer un champ texte en champ de choix dans le formulaire">
 
                     </div>
                 </div>
